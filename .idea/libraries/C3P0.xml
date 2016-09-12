@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="C3P0">
+    <CLASSES>
+      <root url="file://C:/ZJavaLib/C3P0" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://C:/ZJavaLib/C3P0" recursive="false" />
+  </library>
+</component>

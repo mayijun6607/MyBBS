@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="MyBBS:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/MyBBS_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="MyBBS/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="MyBBS" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

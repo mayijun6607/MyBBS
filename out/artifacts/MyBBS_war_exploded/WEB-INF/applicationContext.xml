@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+  <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+        p:user="root" p:jdbcUrl="jdbc:mysql://localhost:3306/mybbs?useServerPrepStmts=true"
+        p:driverClass="com.mysql.jdbc.Driver" p:password="m65860966"
+        p:initialPoolSize="50" p:maxPoolSize="100" p:maxIdleTime="3"
+        p:acquireIncrement="10">
+  </bean>
+  <!-- 注册的BEAN-->
+    <bean id="user" class="user.User" scope="request"/>
+    <bean id="registDAO" class="regist.RegistDAO" scope="request"/>
+    <bean id="registService" class="regist.RegistService" scope="request" p:registDAO-ref="registDAO"/>
+    <bean id="registServlet" class="regist.RegistServlet" scope="request"
+        p:registService-ref="registService" p:comboPooledDataSource-ref="dataSource"
+        p:user-ref="user"/>
+  <!--验证码BEAN-->
+  <bean id="verifyCode" class="verifycode.VerifyCode"/>
+  <bean id="verifyCodeServlet" class="regist.VerifyCodeServlet" p:verifyCode-ref="verifyCode"/>
+  <!--登录的BEAN-->
+  <bean id="loginDAO" class="login.LoginDAO" scope="request"/>
+  <bean id="loginService" class="login.LoginService" scope="request" p:loginDAO-ref="loginDAO"/>
+  <bean id="loginServlet" class="login.LoginServlet" scope="request"
+        p:user-ref="user" p:comboPooledDataSource-ref="dataSource" p:loginService-ref="loginService"/>
+  <!--发帖-->
+  <bean id="tiezi" class="tiezi.Tiezi"/>
+  <bean id="publishTieziDAO" class="publishTiezi.PublishTieziDAO"/>
+  <bean id="publishTieziService" class="publishTiezi.PublishTieziService" p:publishTieziDAO-ref="publishTieziDAO"/>
+  <bean id="publishTieziServlet" class="publishTiezi.PublishTieziServlet" p:comboPooledDataSource-ref="dataSource"
+        p:publishTieziService-ref="publishTieziService" p:tiezi-ref="tiezi"/>
+  <!--综合讨论区显示帖子-->
+  <bean id="generalTieziDAO" class="generalTiezi.GeneralTieziDAO"/>
+  <bean id="generalTieziService" class="generalTiezi.GeneralTieziService" p:generalTieziDAO-ref="generalTieziDAO"/>
+  <bean id="generalTieziServlet" class="generalTiezi.GeneralTieziServlet"
+        p:comboPooledDataSource-ref="dataSource" p:generalTieziService-ref="generalTieziService"/>
+  <!--综合讨论区帖子内容-->
+  <bean id="generalKanTieDAO" class="generalKanTie.GeneralKanTieDAO"/>
+  <bean id="generalKanTieService" class="generalKanTie.GeneralKanTieService" p:generalKanTieDAO-ref="generalKanTieDAO"/>
+  <bean id="generalKanTieServlet" class="generalKanTie.GeneralKanTieServlet" p:comboPooledDataSource-ref="dataSource"
+        p:generalKanTieService-ref="generalKanTieService"/>
+</beans>
