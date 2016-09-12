@@ -10,6 +10,8 @@
 <html>
 <head>
     <%
+        int tieziId=(Integer) request.getAttribute("tieziId");
+        /*request.setAttribute("tieziId",tieziId);*/
         String username="";
         String tieziTitle="";
         String tieziContent="";
@@ -66,7 +68,7 @@
         <div style="position: relative;width:33.5%;bottom: 1%;left:25%">
             <br/>
             <span><b>发表回复:</b></span>
-            <form action="<c:url value=""/> " method="post">
+            <form action="${pageContext.request.contextPath}/TieziReplyServlet" method="post">
                 <hr/>
                 <%-- wrap="hard"代表文本内容带换行符--%>
             <textarea id="tieziReplyContent" name="tieziReplyContent" maxlength="500" wrap="hard" rows="15"
@@ -76,6 +78,8 @@
             <span id="tieziReplyContentWarn" hidden=true style="font-size: smaller;position: absolute;left:70%;">还可以输入
                 <font id="tieziReplyContentCountWarn"  color="red" size="4" >-</font>个字</span>
                 <br/>
+                <input type="text" hidden value="<%=tieziId%>" name="tieziId"/>
+                <input type="text" hidden value="<%=tieziTime%>" name="tieziTime"/>
                 <input type="submit" value="发表" style="width:15%;height:30%;"/>
             </form>
         </div>

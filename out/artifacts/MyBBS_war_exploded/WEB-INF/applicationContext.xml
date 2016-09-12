@@ -44,4 +44,10 @@
   <bean id="generalKanTieService" class="generalKanTie.GeneralKanTieService" p:generalKanTieDAO-ref="generalKanTieDAO"/>
   <bean id="generalKanTieServlet" class="generalKanTie.GeneralKanTieServlet" p:comboPooledDataSource-ref="dataSource"
         p:generalKanTieService-ref="generalKanTieService"/>
+  <!--综合区回帖-->
+  <bean id="replyTiezi" class="tiezi.ReplyTiezi"/>
+  <bean id="tieziReplyDAO" class="tieziReply.TieziReplyDAO"/>
+  <bean id="tieziReplyService" class="tieziReply.TieziReplyService" p:tieziReplyDAO-ref="tieziReplyDAO"/>
+  <bean id="tieziReplyServlet" class="tieziReply.TieziReplyServlet" p:comboPooledDataSource-ref="dataSource"
+        p:tieziReplyService-ref="tieziReplyService" p:replyTiezi-ref="replyTiezi"/>
 </beans>

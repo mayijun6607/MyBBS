@@ -17,5 +17,6 @@ public class PublishTieziService {
 
     public void publishTiezi(Connection connection, Tiezi tiezi) throws SQLException {
         publishTieziDAO.addTiezi(connection,tiezi);
+        publishTieziDAO.createTieziTable(connection,tiezi);
     }
 }

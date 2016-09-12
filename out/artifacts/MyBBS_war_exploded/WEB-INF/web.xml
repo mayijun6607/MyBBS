@@ -55,6 +55,14 @@
         <url-pattern>/RegistServlet</url-pattern>
     </servlet-mapping>
     <servlet>
+        <servlet-name>TieziReplyServlet</servlet-name>
+        <servlet-class>tieziReply.TieziReplyServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TieziReplyServlet</servlet-name>
+        <url-pattern>/TieziReplyServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
         <servlet-name>GeneralKanTieServlet</servlet-name>
         <servlet-class>generalKanTie.GeneralKanTieServlet</servlet-class>
     </servlet>

@@ -50,6 +50,7 @@ public class GeneralKanTieServlet extends HttpServlet{
                 response.sendRedirect("/general/generalError.jsp");
             }
             else {
+                request.setAttribute("tieziId",tieziId);
                 request.setAttribute("tiezi",tiezi);
                 request.getRequestDispatcher("general/generalTiezi.jsp").forward(request,response);
             }
