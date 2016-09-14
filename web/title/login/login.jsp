@@ -34,7 +34,7 @@
                 usernameOk=(String)session.getAttribute("loginUsername");
             }
 
-            //loginFilter
+            //main.myLogin.loginFilter
             String loginFilterWarn="";
             if((String)request.getAttribute("loginFilterWarn")!=null){
                 loginFilterWarn=(String)request.getAttribute("loginFilterWarn");

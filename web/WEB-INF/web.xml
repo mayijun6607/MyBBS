@@ -9,16 +9,17 @@
     </context-param>
     <filter>
         <filter-name>EncodingFilter</filter-name>
-        <filter-class>encode.EncodingFilter</filter-class>
+        <filter-class>main.encode.EncodingFilter</filter-class>
     </filter>
     <filter>
         <filter-name>LoginFilter</filter-name>
-        <filter-class>loginFilter.LoginFilter</filter-class>
+        <filter-class>main.myLogin.loginFilter.LoginFilter</filter-class>
     </filter>
     <filter>
         <filter-name>GeneralTieziFilter</filter-name>
-        <filter-class>generalTieziFilter.GeneralTieziFilter</filter-class>
+        <filter-class>main.Tiezi.generalTieziFilter.GeneralTieziFilter</filter-class>
     </filter>
+
 
 
     <filter-mapping>
@@ -28,11 +29,13 @@
     <filter-mapping>
         <filter-name>LoginFilter</filter-name>
         <servlet-name>PublishTieziServlet</servlet-name>
+        <servlet-name>TieziReplyServlet</servlet-name>
     </filter-mapping>
     <filter-mapping>
         <filter-name>GeneralTieziFilter</filter-name>
         <url-pattern>/general/general.jsp</url-pattern>
     </filter-mapping>
+
 
 
     <listener>
@@ -48,7 +51,7 @@
     </servlet>
     <servlet>
         <servlet-name>RegistServlet</servlet-name>
-        <servlet-class>regist.RegistServlet</servlet-class>
+        <servlet-class>main.myRegist.regist.RegistServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>RegistServlet</servlet-name>
@@ -56,7 +59,7 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>TieziReplyServlet</servlet-name>
-        <servlet-class>tieziReply.TieziReplyServlet</servlet-class>
+        <servlet-class>main.Tiezi.tieziReply.TieziReplyServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>TieziReplyServlet</servlet-name>
@@ -64,7 +67,7 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>GeneralKanTieServlet</servlet-name>
-        <servlet-class>generalKanTie.GeneralKanTieServlet</servlet-class>
+        <servlet-class>main.Tiezi.generalKanTie.GeneralKanTieServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>GeneralKanTieServlet</servlet-name>
@@ -72,27 +75,27 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>VerifyCodeServlet</servlet-name>
-        <servlet-class>regist.VerifyCodeServlet</servlet-class>
+        <servlet-class>main.myRegist.regist.VerifyCodeServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>LoginServlet</servlet-name>
-        <servlet-class>login.LoginServlet</servlet-class>
+        <servlet-class>main.myLogin.login.LoginServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>LoginOutServlet</servlet-name>
-        <servlet-class>login.LoginOutServlet</servlet-class>
+        <servlet-class>main.myLogin.login.LoginOutServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>PublishTieziServlet</servlet-name>
-        <servlet-class>publishTiezi.PublishTieziServlet</servlet-class>
+        <servlet-class>main.Tiezi.publishTiezi.PublishTieziServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>LoginIPServlet</servlet-name>
-        <servlet-class>login.LoginIPServlet</servlet-class>
+        <servlet-class>main.myLogin.login.LoginIPServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>GeneralTieziServlet</servlet-name>
-        <servlet-class>generalTiezi.GeneralTieziServlet</servlet-class>
+        <servlet-class>main.Tiezi.generalTiezi.GeneralTieziServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>GeneralTieziServlet</servlet-name>

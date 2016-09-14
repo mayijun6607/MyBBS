@@ -53,11 +53,14 @@
         String[] title=new String[10];
         String[] content=new String[10];
         String[] time=new String[10];
+        //没剪切过的时间
+        String[] realTime=new String[10];
         for(int p=0;p<10;p++){
             username[p]="";
             title[p]="";
             content[p]="";
             time[p]="";
+            realTime[p]="";
         }
       /*  String[] username={"","","","","","","","","",""};
         String[] title={"","","","","","","","","",""};
@@ -78,7 +81,8 @@
                     username[i] = temp[0];
                     title[i] = temp[1];
                     content[i] = temp[2];
-                    time[i] = temp[3];
+                    realTime[i]=temp[3];
+                    time[i] = realTime[i].substring(0,16);
                     i++;
                 }
                 else{
@@ -104,16 +108,18 @@
             </tr>--%>
             <%
                 for(int k=0;k<10;k++){
+                    if(tieziId[k]!=0){
             %>
             <tr>
                 <%--<td>&nbsp;&nbsp;</td>--%>
-                <td align="right"><a href="${pageContext.request.contextPath}/GeneralKanTieServlet?tieziId=<%=tieziId[k]%>"
+                <td align="right"><a href="${pageContext.request.contextPath}/GeneralKanTieServlet?tieziId=<%=tieziId[k]%>&tieziTime=<%=realTime[k]%>"
                                      style="font-size: x-large"><%out.print(title[k]);%></a> </td>
                 <%--<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>--%>
                 <td align="right"><%out.print(username[k]); %></td>
                 <td><%out.print(time[k]);%></td>
             </tr>
             <%
+                    }
                 }
             %>
         </table>

@@ -1,3 +1,4 @@
+<%@ page import="java.util.Map" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
@@ -10,6 +11,7 @@
 <html>
 <head>
     <%
+        //一楼
         int tieziId=(Integer) request.getAttribute("tieziId");
         /*request.setAttribute("tieziId",tieziId);*/
         String username="";
@@ -21,7 +23,39 @@
         username=tiezi[0];
         tieziTitle=tiezi[1];
         tieziContent=tiezi[2];
-        tieziTime=tiezi[3];
+        String tempTime=tiezi[3];
+        tieziTime=tempTime.substring(0,16);
+
+    %>
+    <%
+        //其余楼层
+        Map<Integer,String[]> replyMap=(Map<Integer, String[]>) request.getAttribute("replyMap");
+        int[] floorId=new int[10];
+        String[] replyUsername=new String[10];
+        String[] replyContent=new String[10];
+        String[] replyTime=new String[10];
+        for(int p=0;p<10;p++){
+            replyUsername[p]="";
+            replyContent[p]="";
+            replyTime[p]="";
+        }
+        String[] temp={"","",""};
+        int i=0;
+        for (Map.Entry<Integer, String[]> entry : replyMap.entrySet()) {
+            for(int j=0;j<3;j++){
+                temp[j]=entry.getValue()[j];
+            }
+            if(i<10) {
+                floorId[i]=entry.getKey();
+                replyUsername[i] = temp[0];
+                replyContent[i] = temp[1];
+                replyTime[i]=temp[2].substring(0,16);
+                i++;
+            }
+            else{
+                break;
+            }
+        }
 
     %>
     <title><%=tieziTitle%></title>
@@ -54,13 +88,29 @@
             <table style="border-collapse:   separate;   border-spacing:   25px;
             width: 100%;border: 2px solid black">
                 <tr>
-                    <td align="left"><%=username%></td>
+                    <td align="left" ><%=username%></td>
                     <td><%=tieziContent%></td>
                 </tr>
-                <tr>
-                    <td align="left"><%=tieziTime%></td>
-                    <td align="right">1楼</td>
+                <tr >
+                    <td align="left" style="border-bottom: 1px solid black"><%=tieziTime%></td>
+                    <td align="right" style="border-bottom: 1px solid black;">1楼</td>
                 </tr>
+                <%
+                    for(int u=0;u<10;u++){
+                        if(floorId[u]!=0){
+                %>
+                    <tr>
+                        <td align="left"><%=replyUsername[u]%></td>
+                        <td><%=replyContent[u]%></td>
+                    </tr>
+                    <tr >
+                        <td align="left" style="border-bottom: 1px solid black"><%=replyTime[u]%></td>
+                        <td align="right" style="border-bottom: 1px solid black;"><%=floorId[u]%>楼</td>
+                    </tr>
+                <%
+                        }
+                    }
+                %>
             </table>
         </div>
 
@@ -79,7 +129,7 @@
                 <font id="tieziReplyContentCountWarn"  color="red" size="4" >-</font>个字</span>
                 <br/>
                 <input type="text" hidden value="<%=tieziId%>" name="tieziId"/>
-                <input type="text" hidden value="<%=tieziTime%>" name="tieziTime"/>
+                <input type="text" hidden value="<%=tempTime%>" name="tieziTime"/>
                 <input type="submit" value="发表" style="width:15%;height:30%;"/>
             </form>
         </div>

@@ -117,7 +117,7 @@
 </body>
 <script type="application/javascript">
     function login1(){
-        window.location.href="../login/login.jsp";
+        window.location.href="${pageContext.request.contextPath}/title/login/login.jsp";
     }
 
     function return1(){
