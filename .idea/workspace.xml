@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d01aa37a-fa5b-43af-9ae4-9891d588feb6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/domain/page/ReplyPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Tiezi/generalKanTie/GeneralKanTieDAO.java" afterPath="$PROJECT_DIR$/src/main/Tiezi/generalKanTie/GeneralKanTieDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Tiezi/generalKanTie/GeneralKanTieService.java" afterPath="$PROJECT_DIR$/src/main/Tiezi/generalKanTie/GeneralKanTieService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Tiezi/generalKanTie/GeneralKanTieServlet.java" afterPath="$PROJECT_DIR$/src/main/Tiezi/generalKanTie/GeneralKanTieServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Tiezi/generalTiezi/GeneralTieziServlet.java" afterPath="$PROJECT_DIR$/src/main/Tiezi/generalTiezi/GeneralTieziServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/domain/tiezi/ReplyTiezi.java" afterPath="$PROJECT_DIR$/src/main/domain/tiezi/ReplyTiezi.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/applicationContext.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/applicationContext.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/general/general.jsp" afterPath="$PROJECT_DIR$/web/general/general.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/general/generalTiezi.jsp" afterPath="$PROJECT_DIR$/web/general/generalTiezi.jsp" />
-    </list>
+    <list default="true" id="d01aa37a-fa5b-43af-9ae4-9891d588feb6" name="Default" comment="" />
     <ignored path="MyBBS.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -1834,7 +1823,7 @@
       <workItem from="1473688076153" duration="293000" />
       <workItem from="1473735444575" duration="6648000" />
       <workItem from="1473821427068" duration="12122000" />
-      <workItem from="1473838971404" duration="7043000" />
+      <workItem from="1473838971404" duration="7173000" />
     </task>
     <task id="LOCAL-00001" summary="new change">
       <created>1473657047248</created>
@@ -1846,11 +1835,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136954000" />
+    <option name="totallyTimeSpent" value="137084000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1861,7 +1850,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3546284" sideWeight="0.485" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3546284" sideWeight="0.485" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985657" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
