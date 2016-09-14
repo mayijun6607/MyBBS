@@ -40,7 +40,7 @@
     <%--综合讨论标题和页码选择--%>
     <span ><img  src="<c:url value="/general/image/general-title.jpg"/> "/> <hr/></span>
     <div style="position: absolute;left:50%;top:3%;">
-        <form action="<c:url value="/GeneralTieziServlet"/> " method="post">
+        <form action="<c:url value="/GeneralTieziServlet"/> " method="get">
             <input type="button" value="首页" onclick="firstPage()"/>
             <input type="button" value="上一页" onclick="previousPage()"/>
             <%
@@ -52,7 +52,8 @@
             %>
             <input type="button" value="下一页" onclick="nextPage()"/>
             <input type="button" value="尾页" onclick="lastPage()"/>
-            <input type="text" name="currentPage" size="1"/>页
+            当前页:<input type="text" value="<%=request.getAttribute("currentPage")%>" disabled size="1"/>
+            <input type="text" name="currentPage" size="1"/>/<%=request.getAttribute("totalPage")%>页
             <input type="submit" value="go"/>
         </form>
     </div>
@@ -66,7 +67,7 @@
         String[] time=new String[10];
         //没剪切过的时间
        // String[] realTime=new String[10];
-        for(int p=0;p<10;p++){
+        for(int p=0;p<(Integer)request.getAttribute("pageSize");p++){
             username[p]="";
             title[p]="";
             content[p]="";

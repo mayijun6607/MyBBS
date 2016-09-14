@@ -29,18 +29,22 @@
     %>
     <%
         //其余楼层
-        Map<Integer,String[]> replyMap=(Map<Integer, String[]>) request.getAttribute("replyMap");
+        //Map<Integer,String[]> replyMap=(Map<Integer, String[]>) request.getAttribute("replyMap");
         int[] floorId=new int[10];
         String[] replyUsername=new String[10];
         String[] replyContent=new String[10];
         String[] replyTime=new String[10];
-        for(int p=0;p<10;p++){
+        for(int p=0;p<(Integer)request.getAttribute("pageSize");p++){
             replyUsername[p]="";
             replyContent[p]="";
             replyTime[p]="";
         }
-        String[] temp={"","",""};
-        int i=0;
+        replyUsername=(String[])request.getAttribute("replyUsername");
+        replyContent=(String[])request.getAttribute("replyContent");
+        replyTime=(String[])request.getAttribute("replyTime");
+        floorId=(int[])request.getAttribute("floorId");
+        //String[] temp={"","",""};
+        /*int i=0;
         for (Map.Entry<Integer, String[]> entry : replyMap.entrySet()) {
             for(int j=0;j<3;j++){
                 temp[j]=entry.getValue()[j];
@@ -55,8 +59,7 @@
             else{
                 break;
             }
-        }
-
+        }*/
     %>
     <title><%=tieziTitle%></title>
 </head>
@@ -82,11 +85,37 @@
 
     <%--帖子内容--%>
     <div style="background-color:#99d9ea;border:2px solid black;width:97.6%;position:absolute;top:24%;left:1%;">
+       <%-- 帖子标题--%>
+        <br/>
+        &nbsp;<span style="font-size: 220%"><%=tieziTitle%><hr/></span>
+        <div style="position: absolute;left:50%;top:3%;">
+            <form action="<c:url value="/GeneralKanTieServlet"/> " method="get">
+                <input type="button" value="首页" onclick="firstPage()"/>
+                <input type="button" value="上一页" onclick="previousPage()"/>
+                <%
+                    for(int t=1;t<=(Integer)request.getAttribute("totalPage");t++){
+                %>
+                <a href="${pageContext.request.contextPath}/GeneralKanTieServlet?currentPage=<%=t%>&tieziId=<%=tieziId%>&tieziTime=<%=tempTime%>"><%=t%></a>
+                <%
+                    }
+                %>
+                <input type="button" value="下一页" onclick="nextPage()"/>
+                <input type="button" value="尾页" onclick="lastPage()"/>
+                当前页:<input type="text" value="<%=request.getAttribute("currentPage")%>" disabled size="1"/>
+                <input type="text" name="currentPage" size="1"/>/<%=request.getAttribute("totalPage")%>页
+                <input type="text" name="tieziId" hidden value="<%=tieziId%>"/>
+                <input type="text" name="tieziTime" hidden value="<%=tempTime%>"/>
+                <input type="submit" value="go"/>
+            </form>
+        </div>
 
         <%--帖子主要内容--%>
         <div style="width:50%;position: relative;left:20%;">
             <table style="border-collapse:   separate;   border-spacing:   25px;
             width: 100%;border: 2px solid black">
+                <%
+                    if((Integer)request.getAttribute("currentPage")==1){
+                %>
                 <tr>
                     <td align="left" ><%=username%></td>
                     <td><%=tieziContent%></td>
@@ -96,7 +125,10 @@
                     <td align="right" style="border-bottom: 1px solid black;">1楼</td>
                 </tr>
                 <%
-                    for(int u=0;u<10;u++){
+                    }
+                %>
+                <%
+                    for(int u=0;u<(Integer)request.getAttribute("pageSize");u++){
                         if(floorId[u]!=0){
                 %>
                     <tr>
@@ -104,7 +136,7 @@
                         <td><%=replyContent[u]%></td>
                     </tr>
                     <tr >
-                        <td align="left" style="border-bottom: 1px solid black"><%=replyTime[u]%></td>
+                        <td align="left" style="border-bottom: 1px solid black"><%=replyTime[u].substring(0,16)%></td>
                         <td align="right" style="border-bottom: 1px solid black;"><%=floorId[u]+1%>楼</td>
                     </tr>
                 <%
@@ -138,4 +170,26 @@
 
 </body>
 <script type="text/javascript" src="${pageContext.request.contextPath}/general/generalTiezi.js"></script>
+<script type="text/javascript">
+    //首页
+    function firstPage(){
+        window.location.href="${pageContext.request.contextPath}/GeneralKanTieServlet?currentPage=1&"+
+                "tieziId=<%=tieziId%>&tieziTime=<%=tempTime%>";
+    }
+    //尾页
+    function lastPage(){
+        window.location.href="${pageContext.request.contextPath}/GeneralKanTieServlet?currentPage="+
+        <%=(Integer)request.getAttribute("totalPage")%>+"&tieziId=<%=tieziId%>&tieziTime=<%=tempTime%>";
+    }
+    //上一页
+    function previousPage(){
+        window.location.href="${pageContext.request.contextPath}/GeneralKanTieServlet?currentPage="+
+        <%=(Integer)request.getAttribute("currentPage")-1%>+"&tieziId=<%=tieziId%>&tieziTime=<%=tempTime%>";
+    }
+    //下一页
+    function nextPage(){
+        window.location.href="${pageContext.request.contextPath}/GeneralKanTieServlet?currentPage="+
+        <%=(Integer)request.getAttribute("currentPage")+1%>+"&tieziId=<%=tieziId%>&tieziTime=<%=tempTime%>";
+    }
+</script>
 </html>

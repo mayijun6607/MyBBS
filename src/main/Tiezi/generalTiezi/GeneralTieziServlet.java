@@ -66,7 +66,9 @@ public class GeneralTieziServlet extends HttpServlet {
             }
             page.setTotalRecord(generalTieziService.getTotalRecord(connection));
             List<Tiezi> tiezi=generalTieziService.getTiezi(connection,page);
-            //System.out.println(tiezi);
+
+            //System.out.println(page.getTotalPage());
+
             request.setAttribute("tieziTitle",generalTieziService.getTieziTitle(tiezi,page));
             request.setAttribute("tieziUsername",generalTieziService.getTieziUsername(tiezi,page));
             request.setAttribute("tieziContent",generalTieziService.getTieziContent(tiezi,page));

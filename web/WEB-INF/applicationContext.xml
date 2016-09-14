@@ -10,8 +10,8 @@
   <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
         p:user="root" p:jdbcUrl="jdbc:mysql://localhost:3306/mybbs?useServerPrepStmts=true"
         p:driverClass="com.mysql.jdbc.Driver" p:password="m65860966"
-        p:initialPoolSize="50" p:maxPoolSize="100" p:maxIdleTime="3"
-        p:acquireIncrement="10">
+        p:initialPoolSize="20" p:maxPoolSize="50" p:maxIdleTime="3"
+        p:acquireIncrement="5">
   </bean>
   <!-- 注册的BEAN-->
     <bean id="user" class="main.domain.user.User" scope="request"/>
@@ -41,14 +41,15 @@
   <bean id="generalTieziServlet" class="main.Tiezi.generalTiezi.GeneralTieziServlet"
         p:comboPooledDataSource-ref="dataSource" p:generalTieziService-ref="generalTieziService" p:page-ref="page"/>
   <!--综合讨论区帖子内容-->
+  <bean id="replyPage" class="main.domain.page.ReplyPage"/>
   <bean id="generalKanTieDAO" class="main.Tiezi.generalKanTie.GeneralKanTieDAO"/>
   <bean id="generalKanTieService" class="main.Tiezi.generalKanTie.GeneralKanTieService" p:generalKanTieDAO-ref="generalKanTieDAO"/>
   <bean id="generalKanTieServlet" class="main.Tiezi.generalKanTie.GeneralKanTieServlet" p:comboPooledDataSource-ref="dataSource"
-        p:generalKanTieService-ref="generalKanTieService"/>
+        p:generalKanTieService-ref="generalKanTieService" p:replyPage-ref="replyPage"/>
   <!--综合区回帖-->
   <bean id="replyTiezi" class="main.domain.tiezi.ReplyTiezi"/>
   <bean id="tieziReplyDAO" class="main.Tiezi.tieziReply.TieziReplyDAO"/>
   <bean id="tieziReplyService" class="main.Tiezi.tieziReply.TieziReplyService" p:tieziReplyDAO-ref="tieziReplyDAO"/>
   <bean id="tieziReplyServlet" class="main.Tiezi.tieziReply.TieziReplyServlet" p:comboPooledDataSource-ref="dataSource"
-        p:tieziReplyService-ref="tieziReplyService" p:replyTiezi-ref="replyTiezi"/>
+        p:tieziReplyService-ref="tieziReplyService" p:replyTiezi-ref="replyTiezi" />
 </beans>

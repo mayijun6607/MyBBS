@@ -8,7 +8,26 @@ public class ReplyTiezi {
     private int tieziId;
     private String tieziReply;
     private String replyTime;
+    private int floorId;
 
+    public int getFloorId() {
+        return floorId;
+    }
+
+    public void setFloorId(int floorId) {
+        this.floorId = floorId;
+    }
+
+    public ReplyTiezi(){
+
+    }
+    public ReplyTiezi(String replyUsername,int tieziId,String tieziReply,String replyTime,int floorId){
+        this.replyUsername=replyUsername;
+        this.tieziId=tieziId;
+        this.tieziReply=tieziReply;
+        this.replyTime=replyTime;
+        this.floorId=floorId;
+    }
     public String getReplyUsername() {
         return replyUsername;
     }
