@@ -25,8 +25,8 @@ public class PublishTieziDAO {
     public void addTiezi(Connection connection, Tiezi tiezi) throws SQLException {
         try(PreparedStatement preparedStatement=connection.prepareStatement(addSql)){
             //转换发帖时间
-            SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS");
-            String sqlTime=simpleDateFormat.format(date);
+            SimpleDateFormat simpleDateFormat1=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS");
+            String sqlTime=simpleDateFormat1.format(date);
             preparedStatement.setString(1,tiezi.getUsername());
             preparedStatement.setString(2,tiezi.getTieziTitle());
             preparedStatement.setString(3,tiezi.getTieziContent());
@@ -44,8 +44,8 @@ public class PublishTieziDAO {
             preparedStatement.execute();
         }
         catch (Exception e){
-            //e.printStackTrace();
-            throw new RuntimeException("发表综合讨论区帖子DAO创建表时出错！");
+            e.printStackTrace();
+            //throw new RuntimeException("发表综合讨论区帖子DAO创建表时出错！");
         }
     }
 }

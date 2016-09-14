@@ -21,24 +21,25 @@
           p:registService-ref="registService" p:comboPooledDataSource-ref="dataSource"
           p:user-ref="user"/>
   <!--验证码BEAN-->
-  <bean id="verifyCode" class="main.myRegist.verifycode.VerifyCode"/>
-  <bean id="verifyCodeServlet" class="main.myRegist.regist.VerifyCodeServlet" p:verifyCode-ref="verifyCode"/>
+  <bean id="verifyCode" class="main.myRegist.verifycode.VerifyCode" scope="session"/>
+  <bean id="verifyCodeServlet" class="main.myRegist.regist.VerifyCodeServlet" p:verifyCode-ref="verifyCode" scope="session"/>
   <!--登录的BEAN-->
   <bean id="loginDAO" class="main.myLogin.login.LoginDAO" scope="request"/>
   <bean id="loginService" class="main.myLogin.login.LoginService" scope="request" p:loginDAO-ref="loginDAO"/>
   <bean id="loginServlet" class="main.myLogin.login.LoginServlet" scope="request"
         p:user-ref="user" p:comboPooledDataSource-ref="dataSource" p:loginService-ref="loginService"/>
   <!--发帖-->
-  <bean id="tiezi" class="main.domain.tiezi.Tiezi"/>
-  <bean id="publishTieziDAO" class="main.Tiezi.publishTiezi.PublishTieziDAO"/>
-  <bean id="publishTieziService" class="main.Tiezi.publishTiezi.PublishTieziService" p:publishTieziDAO-ref="publishTieziDAO"/>
-  <bean id="publishTieziServlet" class="main.Tiezi.publishTiezi.PublishTieziServlet" p:comboPooledDataSource-ref="dataSource"
+  <bean id="tiezi" class="main.domain.tiezi.Tiezi" scope="request"/>
+  <bean id="publishTieziDAO" class="main.Tiezi.publishTiezi.PublishTieziDAO" scope="request"/>
+  <bean id="publishTieziService" class="main.Tiezi.publishTiezi.PublishTieziService" scope="request" p:publishTieziDAO-ref="publishTieziDAO"/>
+  <bean id="publishTieziServlet" class="main.Tiezi.publishTiezi.PublishTieziServlet" scope="request" p:comboPooledDataSource-ref="dataSource"
         p:publishTieziService-ref="publishTieziService" p:tiezi-ref="tiezi"/>
   <!--综合讨论区显示帖子-->
+  <bean id="page" class="main.domain.page.Page"/>
   <bean id="generalTieziDAO" class="main.Tiezi.generalTiezi.GeneralTieziDAO"/>
   <bean id="generalTieziService" class="main.Tiezi.generalTiezi.GeneralTieziService" p:generalTieziDAO-ref="generalTieziDAO"/>
   <bean id="generalTieziServlet" class="main.Tiezi.generalTiezi.GeneralTieziServlet"
-        p:comboPooledDataSource-ref="dataSource" p:generalTieziService-ref="generalTieziService"/>
+        p:comboPooledDataSource-ref="dataSource" p:generalTieziService-ref="generalTieziService" p:page-ref="page"/>
   <!--综合讨论区帖子内容-->
   <bean id="generalKanTieDAO" class="main.Tiezi.generalKanTie.GeneralKanTieDAO"/>
   <bean id="generalKanTieService" class="main.Tiezi.generalKanTie.GeneralKanTieService" p:generalKanTieDAO-ref="generalKanTieDAO"/>

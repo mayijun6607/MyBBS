@@ -19,7 +19,7 @@ public class LoginFilter implements Filter {
         HttpServletResponse response=(HttpServletResponse)resp;
         request.setAttribute("loginFilterWarn","请先登录!");
         if(session.getAttribute("username")==null){
-            request.getRequestDispatcher("title/main.myLogin.login/main.myLogin.login.jsp").forward(request,response);
+            request.getRequestDispatcher("title/login/login.jsp").forward(request,response);
         }
         else {
             chain.doFilter(req, resp);

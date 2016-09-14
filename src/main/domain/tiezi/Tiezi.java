@@ -11,6 +11,17 @@ public class Tiezi {
     private String tieziArea;
     private int tieziId;
 
+    public Tiezi(){
+
+    }
+    public Tiezi(String username,String tieziTitle,String tieziContent,String tieziDatetime,int tieziId){
+        this.username=username;
+        this.tieziTitle=tieziTitle;
+        this.tieziContent=tieziContent;
+        this.tieziDatetime=tieziDatetime;
+        this.tieziId=tieziId;
+    }
+
     public int getTieziId() {
         return tieziId;
     }

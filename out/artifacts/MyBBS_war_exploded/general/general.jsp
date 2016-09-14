@@ -40,10 +40,9 @@
     <%--综合讨论标题和页码选择--%>
     <span ><img  src="<c:url value="/general/image/general-title.jpg"/> "/> <hr/></span>
     <div style="position: absolute;left:50%;top:3%;">
-        <form>
-            <input type="button" value="首页"/>
-            <input type="button" value="上一页"/>
-        </form>
+        <input type="button" value="首页" onclick="firstPage()"/>
+        <input type="button" value="尾页" onclick="lastPage()"/>
+
     </div>
 
     <%--Servlet传过来的Map的处理  放数组里，再分发下去--%>
@@ -54,23 +53,23 @@
         String[] content=new String[10];
         String[] time=new String[10];
         //没剪切过的时间
-        String[] realTime=new String[10];
+       // String[] realTime=new String[10];
         for(int p=0;p<10;p++){
             username[p]="";
             title[p]="";
             content[p]="";
             time[p]="";
-            realTime[p]="";
+            //realTime[p]="";
         }
-      /*  String[] username={"","","","","","","","","",""};
-        String[] title={"","","","","","","","","",""};
-        String[] content={"","","","","","","","","","","","","","","","","","","",""};
-        String[] time={"","","","","","","","","","","","","","","","","","","",""};
-*/
-        String[] temp={"","","",""};
+        tieziId=(int[])request.getAttribute("tieziId");
+        username=(String[])request.getAttribute("tieziUsername");
+        title=(String[])request.getAttribute("tieziTitle");
+        content=(String[])request.getAttribute("tieziContent");
+        time=(String[])request.getAttribute("tieziTime");
+        int pageSize=(Integer)request.getAttribute("pageSize");
 
-
-        Map<Integer, String[]> idMap = (Map<Integer,String[]>)request.getAttribute("idMap");
+        /*String[] temp={"","","",""};*/
+      /*  Map<Integer, String[]> idMap = (Map<Integer,String[]>)request.getAttribute("idMap");
         int i=0;
             for (Map.Entry<Integer, String[]> entry : idMap.entrySet()) {
                for(int j=0;j<4;j++){
@@ -88,35 +87,23 @@
                 else{
                     break;
                 }
-            }
-
-
+            }*/
     %>
 
     <%--帖子标题预览 一页20条 做成表格，标题 、发帖人、发帖时间 *****href还没实现******--%>
     <div style="border:2px dashed black;width:50%;position:relative;bottom:10%;left:20%;">
         <table style="border-collapse:   separate;   border-spacing:   25px;width: 100%; ">
-         <%--   <tr>
-                <td align="right"><a href="" style="font-size: x-large"><%=title[0]%></a> </td>
-                <td><%=username[0]%></td>
-                <td><%=time[0]%></td>
-            </tr>
-            <tr>
-                <td align="right"><a href="" style="font-size: x-large"><%=title[1]%></a> </td>
-                <td><%=username[1]%></td>
-                <td><%=time[1]%></td>
-            </tr>--%>
             <%
-                for(int k=0;k<10;k++){
+                for(int k=0;k<pageSize;k++){
                     if(tieziId[k]!=0){
             %>
             <tr>
                 <%--<td>&nbsp;&nbsp;</td>--%>
-                <td align="right"><a href="${pageContext.request.contextPath}/GeneralKanTieServlet?tieziId=<%=tieziId[k]%>&tieziTime=<%=realTime[k]%>"
+                <td align="right"><a href="${pageContext.request.contextPath}/GeneralKanTieServlet?tieziId=<%=tieziId[k]%>&tieziTime=<%=time[k]%>"
                                      style="font-size: x-large"><%out.print(title[k]);%></a> </td>
                 <%--<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>--%>
                 <td align="right"><%out.print(username[k]); %></td>
-                <td><%out.print(time[k]);%></td>
+                <td><%=time[k].substring(0,16)%></td>
             </tr>
             <%
                     }
@@ -153,4 +140,15 @@
     </div>
 </body>
 <script type="text/javascript" src="${pageContext.request.contextPath}/general/general.js"></script>
+<script type="text/javascript">
+    //首页
+    function firstPage(){
+        window.location.href="${pageContext.request.contextPath}/GeneralTieziServlet?currentPage=1";
+    }
+    //尾页
+    function lastPage(){
+        window.location.href="${pageContext.request.contextPath}/GeneralTieziServlet?currentPage="+
+        <%=(Integer)request.getAttribute("totalPage")%>;
+    }
+</script>
 </html>

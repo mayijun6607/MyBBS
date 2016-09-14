@@ -73,3 +73,4 @@ function tieziContentWarn1(){
         tieziContentCountWarn.innerHTML="0";
     }
 }
+

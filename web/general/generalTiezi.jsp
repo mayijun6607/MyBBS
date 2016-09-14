@@ -105,7 +105,7 @@
                     </tr>
                     <tr >
                         <td align="left" style="border-bottom: 1px solid black"><%=replyTime[u]%></td>
-                        <td align="right" style="border-bottom: 1px solid black;"><%=floorId[u]%>楼</td>
+                        <td align="right" style="border-bottom: 1px solid black;"><%=floorId[u]+1%>楼</td>
                     </tr>
                 <%
                         }
