@@ -53,7 +53,8 @@ public class GeneralTieziServlet extends HttpServlet {
             request.setAttribute("idMap",idMap);*/
             //设置当前页，应该用getParameter获取
             if(request.getParameter("currentPage")!=null){
-                if(Integer.parseInt(request.getParameter("currentPage"))>0) {
+                if(Integer.parseInt(request.getParameter("currentPage"))>0&&
+                        Integer.parseInt(request.getParameter("currentPage"))<=page.getTotalPage()) {
                     page.setCurrentPage(Integer.parseInt(request.getParameter("currentPage")));
                 }
                 else {
@@ -74,7 +75,9 @@ public class GeneralTieziServlet extends HttpServlet {
 
             request.setAttribute("pageSize",page.getPageSize());
             request.setAttribute("totalPage",page.getTotalPage());
+            request.setAttribute("currentPage",page.getCurrentPage());
             //System.out.println(page.getTotalPage()+"..."+page.getTotalRecord()+"..."+page.getPageSize());
+            //System.out.println(page.getTotalPage());
 
             request.getRequestDispatcher("general/general.jsp").forward(request,response);
         }

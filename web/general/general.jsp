@@ -40,9 +40,21 @@
     <%--综合讨论标题和页码选择--%>
     <span ><img  src="<c:url value="/general/image/general-title.jpg"/> "/> <hr/></span>
     <div style="position: absolute;left:50%;top:3%;">
-        <input type="button" value="首页" onclick="firstPage()"/>
-        <input type="button" value="尾页" onclick="lastPage()"/>
-
+        <form action="<c:url value="/GeneralTieziServlet"/> " method="post">
+            <input type="button" value="首页" onclick="firstPage()"/>
+            <input type="button" value="上一页" onclick="previousPage()"/>
+            <%
+                for(int t=1;t<=(Integer)request.getAttribute("totalPage");t++){
+            %>
+            <a href="${pageContext.request.contextPath}/GeneralTieziServlet?currentPage=<%=t%>"><%=t%></a>
+            <%
+                }
+            %>
+            <input type="button" value="下一页" onclick="nextPage()"/>
+            <input type="button" value="尾页" onclick="lastPage()"/>
+            <input type="text" name="currentPage" size="1"/>页
+            <input type="submit" value="go"/>
+        </form>
     </div>
 
     <%--Servlet传过来的Map的处理  放数组里，再分发下去--%>
@@ -149,6 +161,16 @@
     function lastPage(){
         window.location.href="${pageContext.request.contextPath}/GeneralTieziServlet?currentPage="+
         <%=(Integer)request.getAttribute("totalPage")%>;
+    }
+    //上一页
+    function previousPage(){
+        window.location.href="${pageContext.request.contextPath}/GeneralTieziServlet?currentPage="+
+                <%=(Integer)request.getAttribute("currentPage")-1%>;
+    }
+    //下一页
+    function nextPage(){
+        window.location.href="${pageContext.request.contextPath}/GeneralTieziServlet?currentPage="+
+        <%=(Integer)request.getAttribute("currentPage")+1%>;
     }
 </script>
 </html>
