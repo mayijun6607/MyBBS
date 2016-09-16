@@ -30,6 +30,7 @@
         <filter-name>LoginFilter</filter-name>
         <servlet-name>PublishTieziServlet</servlet-name>
         <servlet-name>TieziReplyServlet</servlet-name>
+        <url-pattern>/userConfig/userConfig.jsp</url-pattern>
     </filter-mapping>
     <filter-mapping>
         <filter-name>GeneralTieziFilter</filter-name>
@@ -77,6 +78,14 @@
         <servlet-name>VerifyCodeServlet</servlet-name>
         <servlet-class>main.myRegist.regist.VerifyCodeServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SetPasswordServlet</servlet-name>
+        <servlet-class>main.userConfig.setPassword.SetPasswordServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SetPasswordServlet</servlet-name>
+        <url-pattern>/SetPasswordServlet</url-pattern>
+    </servlet-mapping>
     <servlet>
         <servlet-name>LoginServlet</servlet-name>
         <servlet-class>main.myLogin.login.LoginServlet</servlet-class>

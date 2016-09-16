@@ -89,7 +89,7 @@
     <div style="background-color:#99d9ea;border:2px solid black;width:97.6%;position:absolute;top:24%;left:1%;">
        <%-- 帖子标题--%>
         <br/>
-        &nbsp;<span style="font-size: 220%"><%=tieziTitle%><hr/></span>
+        &nbsp;<span style="font-size: 220%"><b><%=tieziTitle%></b><hr/></span>
         <div style="position: absolute;left:50%;top:3%;">
             <form action="<c:url value="/GeneralKanTieServlet"/> " method="get">
                 <input type="button" value="首页" onclick="firstPage()"/>

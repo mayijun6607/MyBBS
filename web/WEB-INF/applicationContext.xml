@@ -14,7 +14,7 @@
         p:acquireIncrement="5">
   </bean>
   <!-- 注册的BEAN-->
-    <bean id="user" class="main.domain.user.User" scope="request"/>
+    <bean id="user" class="main.domain.user.User" />
     <bean id="registDAO" class="main.myRegist.regist.RegistDAO" scope="request"/>
     <bean id="registService" class="main.myRegist.regist.RegistService" scope="request" p:registDAO-ref="registDAO"/>
     <bean id="registServlet" class="main.myRegist.regist.RegistServlet" scope="request"
@@ -52,4 +52,10 @@
   <bean id="tieziReplyService" class="main.Tiezi.tieziReply.TieziReplyService" p:tieziReplyDAO-ref="tieziReplyDAO"/>
   <bean id="tieziReplyServlet" class="main.Tiezi.tieziReply.TieziReplyServlet" p:comboPooledDataSource-ref="dataSource"
         p:tieziReplyService-ref="tieziReplyService" p:replyTiezi-ref="replyTiezi" />
+  <!--修改密码-->
+  <bean id="setPasswordDAO" class="main.userConfig.setPassword.SetPasswordDAO" />
+  <bean id="setPasswordService" class="main.userConfig.setPassword.SetPasswordService"
+        p:setPasswordDAO-ref="setPasswordDAO" />
+  <bean id="setPasswordServlet" class="main.userConfig.setPassword.SetPasswordServlet" p:comboPooledDataSource-ref="dataSource"
+        p:setPasswordService-ref="setPasswordService" p:user-ref="user" />
 </beans>

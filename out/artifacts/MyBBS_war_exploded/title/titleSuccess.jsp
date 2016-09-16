@@ -20,7 +20,19 @@
 
         <%--改成您好，XXX 以及退出登录--%>
         <span style="position: absolute;left: 75%;top: 6%;">
-            <font size="5" color="black">您好,<%=session.getAttribute("username")%></font> &nbsp;&nbsp;
+            <font size="5" color="black">您好,
+            <%
+                String username=(String)session.getAttribute("username");
+                if(username.length()<=6){
+            %>
+                <a href="${pageContext.request.contextPath}/userConfig/userConfig.jsp"><%=username%></a>
+            <%
+                }
+                else{
+                out.print(username);
+                }
+            %>
+            </font> &nbsp;&nbsp;
             <a href="<c:url value="/LoginOutServlet"/> "><font size="3" color="blue">退出登录</font> </a>
         </span>
     <span style="position: absolute;left: 45%;top: 4%;"><font size="10" color="black">MyBBS</font></span>

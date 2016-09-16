@@ -43,7 +43,7 @@
       <img  src="<c:url value="/index/image/index-official.jpg" />"/>
     </div>
       <span style="font-size: x-large;font-weight: bold;position:absolute;top:12.5%;left:17%;"><a href="">MyBBS|官方公告</a> </span>
-      <span style="position:absolute;top:20%;left:17%;">官方信息发布</span>
+      <span style="position:absolute;top:20%;left:17%;">官方信息发布<b>(>>未施工<<)</b></span>
 
     <%--综合讨论--%>
     <div style="position: absolute;top:12% ;left:50%;">
