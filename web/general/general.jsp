@@ -107,12 +107,12 @@
     <div style="border:2px dashed black;width:50%;position:relative;bottom:10%;left:20%;">
         <table style="border-collapse:   separate;   border-spacing:   25px;width: 100%; ">
             <%
-                for(int k=0;k<pageSize;k++){
+                for(int k=pageSize-1;k>=0;k--){
                     if(tieziId[k]!=0){
             %>
             <tr>
                 <%--<td>&nbsp;&nbsp;</td>--%>
-                <td align="right"><a href="${pageContext.request.contextPath}/GeneralKanTieServlet?tieziId=<%=tieziId[k]%>&tieziTime=<%=time[k]%>"
+                <td align="center"><a href="${pageContext.request.contextPath}/GeneralKanTieServlet?tieziId=<%=tieziId[k]%>&tieziTime=<%=time[k]%>"
                                      style="font-size: x-large"><%out.print(title[k]);%></a> </td>
                 <%--<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>--%>
                 <td align="right"><%out.print(username[k]); %></td>

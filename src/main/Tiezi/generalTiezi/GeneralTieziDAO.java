@@ -70,7 +70,18 @@ public class GeneralTieziDAO {
     //查询当前页记录
    //(page.getCurrentPage()-1)*page.getPageSize()+","+page.getPageSize();
     public List<Tiezi> getTiezi(Connection connection,Page page) throws SQLException {
-        String tieziSql = "select * from general_tiezi limit " + (page.getCurrentPage() - 1) * page.getPageSize() + "," + page.getPageSize();
+        //System.out.println(page.getTotalPage());
+        //倒序看帖算法
+        int limitRight=0;
+        int limitLeft=page.getTotalRecord()-(page.getCurrentPage()*10-1)-1;
+        if(page.getCurrentPage()!=page.getTotalPage()){
+            limitRight=page.getPageSize();
+        }
+        else{
+            limitLeft=0;
+            limitRight=page.getTotalRecord()-(page.getCurrentPage()-1)*10;
+        }
+        String tieziSql = "select * from general_tiezi limit " +limitLeft + "," + limitRight;
         ResultSet resultSet=null;
         List<Tiezi> tiezi=new ArrayList<>();
         try(PreparedStatement preparedStatement=connection.prepareStatement(tieziSql)){
