@@ -16,6 +16,8 @@
     <title>综合讨论</title>
 </head>
 <body>
+    <%--顶部锚点--%>
+    <a name="top" id="top"></a>
     <%--登录后和登录前不同的TITLE.JSP--%>
     <%
         if(session.getAttribute("username")!=null){%>
@@ -104,7 +106,8 @@
     %>
 
     <%--帖子标题预览 一页20条 做成表格，标题 、发帖人、发帖时间 *****href还没实现******--%>
-    <div style="border:2px dashed black;width:50%;position:relative;bottom:10%;left:20%;">
+    <div style="border:2px dashed black;width:50%;position:relative;bottom:10%;left:20%;">\
+
         <table style="border-collapse:   separate;   border-spacing:   25px;width: 100%; ">
             <%
                 for(int k=pageSize-1;k>=0;k--){
@@ -150,6 +153,12 @@
         </form>
     </div>
 
+        <%--回到顶部--%>
+        <div style="border:2px solid black;position:absolute;bottom:2%;left:90%;">
+            <a href="#top" >
+                <img id="returnTop" src="<c:url value="/general/image/return-top.jpg"/> " onmousemove="returnTop1()" onmouseout="returnTop2()"/>
+            </a>
+        </div>
     </div>
 </body>
 <script type="text/javascript" src="${pageContext.request.contextPath}/general/general.js"></script>
@@ -172,6 +181,15 @@
     function nextPage(){
         window.location.href="${pageContext.request.contextPath}/GeneralTieziServlet?currentPage="+
         <%=(Integer)request.getAttribute("currentPage")+1%>;
+    }
+
+    //返回顶部变色
+    var returnTop=document.getElementById("returnTop");
+    function returnTop1(){
+        returnTop.src="${pageContext.request.contextPath}/general/image/focusReturn-top.jpg";
+    }
+    function returnTop2(){
+        returnTop.src="${pageContext.request.contextPath}/general/image/return-top.jpg";
     }
 </script>
 </html>

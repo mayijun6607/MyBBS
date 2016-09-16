@@ -64,6 +64,8 @@
     <title><%=tieziTitle%></title>
 </head>
 <body>
+    <%--顶部锚点--%>
+    <a name="top" id="top"></a>
     <%--登录后和登录前不同的TITLE.JSP--%>
     <%
         if(session.getAttribute("username")!=null){%>
@@ -165,7 +167,12 @@
                 <input type="submit" value="发表" style="width:15%;height:30%;"/>
             </form>
         </div>
-
+           <%--回到顶部--%>
+           <div style="border:2px solid black;position:absolute;bottom:2%;left:90%;">
+               <a href="#top" >
+                   <img id="returnTop" src="<c:url value="/general/image/return-top.jpg"/> " onmousemove="returnTop1()" onmouseout="returnTop2()"/>
+               </a>
+           </div>
     </div>
 
 </body>
@@ -190,6 +197,15 @@
     function nextPage(){
         window.location.href="${pageContext.request.contextPath}/GeneralKanTieServlet?currentPage="+
         <%=(Integer)request.getAttribute("currentPage")+1%>+"&tieziId=<%=tieziId%>&tieziTime=<%=tempTime%>";
+    }
+
+    //返回顶部变色
+    var returnTop=document.getElementById("returnTop");
+    function returnTop1(){
+        returnTop.src="${pageContext.request.contextPath}/general/image/focusReturn-top.jpg";
+    }
+    function returnTop2(){
+        returnTop.src="${pageContext.request.contextPath}/general/image/return-top.jpg";
     }
 </script>
 </html>

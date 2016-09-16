@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d01aa37a-fa5b-43af-9ae4-9891d588feb6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MyBBS_war_exploded/WEB-INF/classes/main/Tiezi/generalTiezi/GeneralTieziDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/MyBBS_war_exploded/WEB-INF/classes/main/Tiezi/generalTiezi/GeneralTieziDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MyBBS/main/Tiezi/generalTiezi/GeneralTieziDAO.class" afterPath="$PROJECT_DIR$/out/production/MyBBS/main/Tiezi/generalTiezi/GeneralTieziDAO.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/general/image/focusReturn-top.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/general/image/return-top.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MyBBS_war_exploded/general/general.jsp" afterPath="$PROJECT_DIR$/out/artifacts/MyBBS_war_exploded/general/general.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Tiezi/generalTiezi/GeneralTieziDAO.java" afterPath="$PROJECT_DIR$/src/main/Tiezi/generalTiezi/GeneralTieziDAO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/general/general.jsp" afterPath="$PROJECT_DIR$/web/general/general.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/general/generalTiezi.jsp" afterPath="$PROJECT_DIR$/web/general/generalTiezi.jsp" />
     </list>
     <ignored path="MyBBS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -773,40 +773,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="general.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/general/general.jsp">
+      <file leaf-file-name="generalTiezi.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/general/generalTiezi.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.6666667">
-              <caret line="114" column="33" selection-start-line="114" selection-start-column="33" selection-end-line="114" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.91799545">
+              <caret line="208" column="5" selection-start-line="208" selection-start-column="5" selection-end-line="208" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GeneralTieziDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/Tiezi/generalTiezi/GeneralTieziDAO.java">
+      <file leaf-file-name="general.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/general/general.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="98" column="12" selection-start-line="98" selection-start-column="12" selection-end-line="98" selection-end-column="12" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1473997979020" expanded="true" signature="422:449" placeholder="select * fro... general_tiezi" />
-                <marker date="1473997979020" expanded="true" signature="1514:1548" placeholder="select count... general_teizi" />
-                <marker date="1473997979020" expanded="true" signature="2857:2890" placeholder="select * fro... general" />
-                <marker date="1473997979020" expanded="true" signature="2857:2891" placeholder="select * fro... general" />
-                <marker date="1473997979020" expanded="true" signature="2857:2905" placeholder="select * fro... general" />
-                <marker date="1473997979020" expanded="true" signature="2857:2908" placeholder="select * fro... general_tiezi" />
-                <marker date="1473997979020" expanded="true" signature="2857:2912" placeholder="select * fro... general" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GeneralTieziServlet.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/Tiezi/generalTiezi/GeneralTieziServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8819742">
-              <caret line="69" column="14" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="14" />
+            <state vertical-scroll-proportion="-4.9259257">
+              <caret line="184" column="0" selection-start-line="184" selection-start-column="0" selection-end-line="192" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -883,11 +864,11 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/applicationContext.xml" />
         <option value="$PROJECT_DIR$/src/main/Tiezi/generalKanTie/GeneralKanTieService.java" />
         <option value="$PROJECT_DIR$/src/main/Tiezi/generalKanTie/GeneralKanTieDAO.java" />
-        <option value="$PROJECT_DIR$/web/general/generalTiezi.jsp" />
         <option value="$PROJECT_DIR$/src/main/Tiezi/generalTiezi/GeneralTieziServlet.java" />
         <option value="$PROJECT_DIR$/src/main/Tiezi/generalKanTie/GeneralKanTieServlet.java" />
         <option value="$PROJECT_DIR$/src/main/Tiezi/generalTiezi/GeneralTieziDAO.java" />
         <option value="$PROJECT_DIR$/web/general/general.jsp" />
+        <option value="$PROJECT_DIR$/web/general/generalTiezi.jsp" />
       </list>
     </option>
   </component>
@@ -1010,7 +991,47 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="title" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyBBS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyBBS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="general" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyBBS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyBBS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="general" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="image" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1185,18 +1206,18 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\ZZIntelliJ\MyBBS\web\title" />
-      <recent name="C:\ZZIntelliJ\MyBBS\web\WEB-INF\title" />
-      <recent name="C:\ZZIntelliJ\MyBBS\web\WEB-INF\lib" />
-      <recent name="C:\ZZIntelliJ\MyBBS\web\title\image" />
-      <recent name="C:\ZZIntelliJ\MyBBS\web" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\ZZIntelliJ\MyBBS\web\general\image" />
       <recent name="C:\ZZIntelliJ\MyBBS\web\index\image" />
       <recent name="C:\ZZIntelliJ\MyBBS\web\title\image" />
       <recent name="C:\ZZIntelliJ\MyBBS\web\Game\New" />
+      <recent name="C:\ZZIntelliJ\MyBBS\web" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\ZZIntelliJ\MyBBS\web\title" />
+      <recent name="C:\ZZIntelliJ\MyBBS\web\WEB-INF\title" />
+      <recent name="C:\ZZIntelliJ\MyBBS\web\WEB-INF\lib" />
+      <recent name="C:\ZZIntelliJ\MyBBS\web\title\image" />
       <recent name="C:\ZZIntelliJ\MyBBS\web" />
     </key>
   </component>
@@ -1825,7 +1846,7 @@
       <workItem from="1473821427068" duration="12122000" />
       <workItem from="1473838971404" duration="7173000" />
       <workItem from="1473846563569" duration="87000" />
-      <workItem from="1473994854319" duration="3378000" />
+      <workItem from="1473994854319" duration="4645000" />
     </task>
     <task id="LOCAL-00001" summary="new change">
       <created>1473657047248</created>
@@ -1837,7 +1858,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140549000" />
+    <option name="totallyTimeSpent" value="141816000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -2048,13 +2069,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/title/title.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4595843">
-          <caret line="30" column="63" selection-start-line="30" selection-start-column="63" selection-end-line="30" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/title/titleSuccess.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.2078522">
@@ -2239,14 +2253,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/general/generalTiezi.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.7037037">
-          <caret line="90" column="53" selection-start-line="90" selection-start-column="53" selection-end-line="90" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/domain/page/Page.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6180258">
@@ -2283,18 +2289,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/general/general.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/Tiezi/generalTiezi/GeneralTieziServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.6666667">
-          <caret line="114" column="33" selection-start-line="114" selection-start-column="33" selection-end-line="114" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="69" column="14" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Tiezi/generalTiezi/GeneralTieziServlet.java">
+    <entry file="file://$PROJECT_DIR$/web/title/title.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8819742">
-          <caret line="69" column="14" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.48974943">
+          <caret line="30" column="63" selection-start-line="30" selection-start-column="63" selection-end-line="30" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/general/general.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.9259257">
+          <caret line="184" column="0" selection-start-line="184" selection-start-column="0" selection-end-line="192" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/general/generalTiezi.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.91799545">
+          <caret line="208" column="5" selection-start-line="208" selection-start-column="5" selection-end-line="208" selection-end-column="5" />
           <folding />
         </state>
       </provider>
