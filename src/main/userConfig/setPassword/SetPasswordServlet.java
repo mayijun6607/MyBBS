@@ -67,9 +67,7 @@ public class SetPasswordServlet extends HttpServlet {
                 request.setAttribute("oldPasswordWarn",warnInfo[0]);
                 request.setAttribute("newPasswordWarn",warnInfo[1]);
                 request.setAttribute("newPasswordOkWarn",warnInfo[2]);
-                //让DIV不再HIDDEN
-                request.setAttribute("success","no");
-                request.getRequestDispatcher("/userConfig/userConfig.jsp").forward(request,response);
+                request.getRequestDispatcher("/userConfig/setPassword.jsp").forward(request,response);
             }
         }
         catch (Exception e){

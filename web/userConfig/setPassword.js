@@ -1,6 +1,14 @@
 /**
  * Created by Mayijun on 2016/9/16.
  */
+//提交给一个确认框体的方法
+var setPasswordForm=document.getElementById("setPasswordForm");
+function confirm1(){
+    var con=confirm("确认修改？");
+    if(con==true){
+        setPasswordForm.submit();
+    }
+}
 //拿到的关于密码和确认密码的元素
 var oldPassword=document.getElementById("oldPassword");
 var oldPasswordWarn=document.getElementById("oldPasswordWarn");

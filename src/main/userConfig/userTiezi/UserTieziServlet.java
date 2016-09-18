@@ -1,4 +1,4 @@
-package main.Tiezi.generalTiezi;
+package main.userConfig.userTiezi;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 import main.domain.page.Page;
@@ -13,16 +13,14 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.sql.Connection;
-import java.sql.SQLException;
 import java.util.List;
-import java.util.Map;
 
 /**
- * Created by Mayijun on 2016/9/11.
+ * Created by Mayijun on 2016/9/18.
  */
-public class GeneralTieziServlet extends HttpServlet {
-    private GeneralTieziService generalTieziService;
+public class UserTieziServlet extends HttpServlet {
     private ComboPooledDataSource comboPooledDataSource;
+    private UserTieziService userTieziService;
     private Page page;
 
     public void setPage(Page page) {
@@ -33,24 +31,19 @@ public class GeneralTieziServlet extends HttpServlet {
         this.comboPooledDataSource = comboPooledDataSource;
     }
 
-    public void setGeneralTieziService(GeneralTieziService generalTieziService) {
-        this.generalTieziService = generalTieziService;
+    public void setUserTieziService(UserTieziService userTieziService) {
+        this.userTieziService = userTieziService;
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doGet(request,response);
-    }
-
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         WebApplicationContext webApplicationContext= WebApplicationContextUtils.getWebApplicationContext(this.getServletContext());
         comboPooledDataSource=webApplicationContext.getBean("dataSource",ComboPooledDataSource.class);
-        generalTieziService=webApplicationContext.getBean("generalTieziService",GeneralTieziService.class);
+        userTieziService=webApplicationContext.getBean("userTieziService",UserTieziService.class);
         page=webApplicationContext.getBean("page",Page.class);
         HttpSession session=request.getSession();
 
         try(Connection connection=comboPooledDataSource.getConnection()){
-            /*Map<Integer,String[]> idMap=generalTieziService.showTiezi(connection);
-            request.setAttribute("idMap",idMap);*/
             //设置当前页，应该用getParameter获取
             if(request.getParameter("currentPage")!=null){
                 if(Integer.parseInt(request.getParameter("currentPage"))>0&&
@@ -64,28 +57,30 @@ public class GeneralTieziServlet extends HttpServlet {
             else {
                 page.setCurrentPage(1);
             }
-            page.setTotalRecord(generalTieziService.getTotalRecord(connection));
-            List<Tiezi> tiezi=generalTieziService.getTiezi(connection,page);
 
-            //System.out.println(page.getTotalPage());
+            String username=(String)session.getAttribute("username");
+            page.setTotalRecord(userTieziService.getTotalRecord(connection,username));
+            List<Tiezi> userTiezi=userTieziService.getTiezi(connection,username,page);
 
-            request.setAttribute("tieziTitle",generalTieziService.getTieziTitle(tiezi,page));
-            request.setAttribute("tieziUsername",generalTieziService.getTieziUsername(tiezi,page));
-            request.setAttribute("tieziContent",generalTieziService.getTieziContent(tiezi,page));
-            request.setAttribute("tieziId",generalTieziService.getTieziId(tiezi,page));
-            request.setAttribute("tieziTime",generalTieziService.getTieziTime(tiezi,page));
+            request.setAttribute("tieziTitle",userTieziService.getTieziTitle(userTiezi,page));
+            request.setAttribute("tieziUsername",userTieziService.getTieziUsername(userTiezi,page));
+            request.setAttribute("tieziContent",userTieziService.getTieziContent(userTiezi,page));
+            request.setAttribute("tieziId",userTieziService.getTieziId(userTiezi,page));
+            request.setAttribute("tieziTime",userTieziService.getTieziTime(userTiezi,page));
 
             request.setAttribute("pageSize",page.getPageSize());
             request.setAttribute("totalPage",page.getTotalPage());
             request.setAttribute("currentPage",page.getCurrentPage());
-            //System.out.println(page.getTotalPage()+"..."+page.getTotalRecord()+"..."+page.getPageSize());
-            //System.out.println(page.getTotalPage());
 
-            request.getRequestDispatcher("/general/general.jsp").forward(request,response);
+            request.getRequestDispatcher("/userConfig/userTiezi.jsp").forward(request,response);
         }
-        catch (SQLException e) {
-            throw new RuntimeException("显示帖子页面Servlet出错！");
+        catch (Exception e){
+            throw new RuntimeException("查看主题帖Servlet出错！");
         }
+    }
 
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        doGet(request,response);
     }
 }
