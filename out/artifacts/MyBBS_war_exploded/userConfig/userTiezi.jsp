@@ -97,7 +97,7 @@
                             if(tieziId[k]!=0){
                     %>
                     <tr>
-                        <td align=""><a href="${pageContext.request.contextPath}/GeneralKanTieServlet?tieziId=<%=tieziId[k]%>&tieziTime=<%=time[k]%>"
+                        <td><a href="${pageContext.request.contextPath}/GeneralKanTieServlet?tieziId=<%=tieziId[k]%>&tieziTime=<%=time[k]%>"
                                               style="font-size: medium"><%out.print(title[k]);%></a> </td>
                         <td><%=time[k].substring(0,16)%></td>
                     </tr>

@@ -2,26 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d01aa37a-fa5b-43af-9ae4-9891d588feb6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/userConfig/userTiezi/UserTieziDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/userConfig/userTiezi/UserTieziService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/userConfig/userTiezi/UserTieziServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/userConfig/common.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/userConfig/setPassword.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/userConfig/userTiezi.jsp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/MyBBS_war_exploded/userConfig/userConfig.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/userConfig/userConfig.js" afterPath="$PROJECT_DIR$/web/userConfig/setPassword.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MyBBS_war_exploded/WEB-INF/classes/main/userConfig/setPassword/SetPasswordServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/MyBBS_war_exploded/WEB-INF/classes/main/userConfig/setPassword/SetPasswordServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MyBBS/main/userConfig/setPassword/SetPasswordServlet.class" afterPath="$PROJECT_DIR$/out/production/MyBBS/main/userConfig/setPassword/SetPasswordServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MyBBS_war_exploded/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/out/artifacts/MyBBS_war_exploded/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MyBBS_war_exploded/userConfig/setPasswordSuccess.jsp" afterPath="$PROJECT_DIR$/out/artifacts/MyBBS_war_exploded/userConfig/setPasswordSuccess.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MyBBS_war_exploded/userConfig/userConfig.jsp" afterPath="$PROJECT_DIR$/out/artifacts/MyBBS_war_exploded/userConfig/userConfig.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Tiezi/generalTiezi/GeneralTieziServlet.java" afterPath="$PROJECT_DIR$/src/main/Tiezi/generalTiezi/GeneralTieziServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/userConfig/setPassword/SetPasswordServlet.java" afterPath="$PROJECT_DIR$/src/main/userConfig/setPassword/SetPasswordServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/applicationContext.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/applicationContext.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/userConfig/setPasswordSuccess.jsp" afterPath="$PROJECT_DIR$/web/userConfig/setPasswordSuccess.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/userConfig/userConfig.jsp" afterPath="$PROJECT_DIR$/web/userConfig/userConfig.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/title/title.jsp" afterPath="$PROJECT_DIR$/web/title/title.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/title/titleSuccess.jsp" afterPath="$PROJECT_DIR$/web/title/titleSuccess.jsp" />
     </list>
     <ignored path="MyBBS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -787,11 +769,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="userTiezi.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="userTiezi.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/userConfig/userTiezi.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5330296">
+            <state vertical-scroll-proportion="-8.666667">
               <caret line="99" column="27" selection-start-line="99" selection-start-column="27" selection-end-line="99" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="titleSuccess.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/title/titleSuccess.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5899772">
+              <caret line="107" column="92" selection-start-line="107" selection-start-column="92" selection-end-line="107" selection-end-column="92" />
               <folding />
             </state>
           </provider>
@@ -822,7 +814,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/general/generalTiezi.js" />
         <option value="$PROJECT_DIR$/src/generalKanTie/GeneralKanTieDAO.java" />
         <option value="$PROJECT_DIR$/src/generalKanTie/GeneralKanTieService.java" />
         <option value="$PROJECT_DIR$/web/general/generalError.jsp" />
@@ -856,7 +847,6 @@
         <option value="$PROJECT_DIR$/web/general/generalTiezi.jsp" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/myLogin/loginFilter/LoginFilter.java" />
-        <option value="$PROJECT_DIR$/web/title/titleSuccess.jsp" />
         <option value="$PROJECT_DIR$/web/userConfig/userConfig.js" />
         <option value="$PROJECT_DIR$/src/main/userConfig/setPassword/SetPasswordDAO.java" />
         <option value="$PROJECT_DIR$/src/main/userConfig/setPassword/SetPasswordService.java" />
@@ -873,6 +863,8 @@
         <option value="$PROJECT_DIR$/src/main/Tiezi/generalTiezi/GeneralTieziServlet.java" />
         <option value="$PROJECT_DIR$/src/main/userConfig/userTiezi/UserTieziServlet.java" />
         <option value="$PROJECT_DIR$/web/userConfig/userTiezi.jsp" />
+        <option value="$PROJECT_DIR$/web/title/title.jsp" />
+        <option value="$PROJECT_DIR$/web/title/titleSuccess.jsp" />
       </list>
     </option>
   </component>
@@ -996,6 +988,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="userConfig" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyBBS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyBBS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="title" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1708,7 +1718,7 @@
       <workItem from="1473846563569" duration="87000" />
       <workItem from="1473994854319" duration="6570000" />
       <workItem from="1474006636867" duration="9964000" />
-      <workItem from="1474167353728" duration="5576000" />
+      <workItem from="1474167353728" duration="6023000" />
     </task>
     <task id="LOCAL-00001" summary="new change">
       <created>1473657047248</created>
@@ -1720,7 +1730,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159281000" />
+    <option name="totallyTimeSpent" value="159728000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1731,11 +1741,11 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985657" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3546284" sideWeight="0.5175" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3546284" sideWeight="0.52" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3546284" sideWeight="0.4825" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3546284" sideWeight="0.48" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985657" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1929,22 +1939,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/title/title.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52164006">
-          <caret line="30" column="63" selection-start-line="30" selection-start-column="63" selection-end-line="30" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="78" selection-start-line="45" selection-start-column="78" selection-end-line="45" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/myLogin/loginFilter/LoginFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5064378">
@@ -1956,14 +1950,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.45102507">
           <caret line="91" column="78" selection-start-line="89" selection-start-column="7" selection-end-line="91" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/title/titleSuccess.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6970387">
-          <caret line="27" column="85" selection-start-line="27" selection-start-column="85" selection-end-line="27" selection-end-column="85" />
           <folding />
         </state>
       </provider>
@@ -2228,10 +2214,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.61503416">
+          <caret line="45" column="78" selection-start-line="45" selection-start-column="78" selection-end-line="45" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/title/title.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.79498863">
+          <caret line="93" column="92" selection-start-line="93" selection-start-column="8" selection-end-line="93" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/userConfig/userTiezi.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5330296">
+        <state vertical-scroll-proportion="-8.666667">
           <caret line="99" column="27" selection-start-line="99" selection-start-column="27" selection-end-line="99" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/title/titleSuccess.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5899772">
+          <caret line="107" column="92" selection-start-line="107" selection-start-column="92" selection-end-line="107" selection-end-column="92" />
           <folding />
         </state>
       </provider>
