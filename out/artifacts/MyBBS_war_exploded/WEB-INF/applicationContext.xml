@@ -68,9 +68,12 @@
   <bean id="deleteTieziService" class="main.Tiezi.deleteTiezi.DeleteTieziService" p:deleteTieziDAO-ref="deleteTieziDAO"/>
   <bean id="deleteTieziServlet" class="main.Tiezi.deleteTiezi.DeleteTieziServlet" p:comboPooledDataSource-ref="dataSource"
         p:deleteTieziService-ref="deleteTieziService"/>
+<<<<<<< HEAD
   <!--删除回复-->
   <bean id="deleteReplyDAO" class="main.Tiezi.deleteReply.DeleteReplyDAO"/>
   <bean id="deleteReplyService" class="main.Tiezi.deleteReply.DeleteReplyService" p:deleteReplyDAO-ref="deleteReplyDAO"/>
   <bean id="deleteReplyServlet" class="main.Tiezi.deleteReply.DeleteReplyServlet" p:comboPooledDataSource-ref="dataSource"
         p:deleteReplyService-ref="deleteReplyService"/>
+=======
+>>>>>>> 76035a77b54fe8d955defbf80a029f2fd42da0ab
 </beans>

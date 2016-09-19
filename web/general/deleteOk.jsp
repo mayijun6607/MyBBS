@@ -27,7 +27,11 @@
 
     <%--放Mybbs>>XXX这个导航--%>
         <span style="height:5%;width:100%;font-weight: bold;font-size: larger;position: absolute;top:19%;">
+<<<<<<< HEAD
             &nbsp;<img height:="2.5%" width="1%" src="<c:url value="/index/image/index-home.jpg"/>"/>  &gt;&gt;  <a href="<c:url value="/index.jsp"/>">MyBBS</a>  &gt;&gt;<a href="<c:url value="/general/general.jsp" />">综合讨论</a>  &gt;&gt;删除成功!
+=======
+            &nbsp;<img height:="2.5%" width="1%" src="<c:url value="/index/image/index-home.jpg"/>"/>  &gt;&gt;  <a href="<c:url value="/index.jsp"/>">MyBBS</a>  &gt;&gt;  综合讨论
+>>>>>>> 76035a77b54fe8d955defbf80a029f2fd42da0ab
         </span>
 
     <%--删除成功内容--%>

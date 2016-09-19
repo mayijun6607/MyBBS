@@ -29,7 +29,11 @@ public class DeleteTieziServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+<<<<<<< HEAD
        //doPost(request,response);
+=======
+       doPost(request,response);
+>>>>>>> 76035a77b54fe8d955defbf80a029f2fd42da0ab
     }
 
     @Override

@@ -125,10 +125,12 @@
                         if(((String)session.getAttribute("username")).length()<7){
                 %>
                 <td>
+
                     <form id="deleteId" action="/DeleteTieziServlet" method="post">
                         <input type="text" hidden name="tempTime" value="<%=time[k]%>"/>
                         <input type="text" hidden name="deleteId" value="<%=tieziId[k]%>"/>
                         <input type="button" value="删除帖子" onclick="delete1()"/>
+
                     </form>
                 </td>
                 <%}}%>
