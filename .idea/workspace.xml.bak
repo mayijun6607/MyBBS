@@ -4,7 +4,11 @@
 <<<<<<< HEAD
     <list default="true" id="d01aa37a-fa5b-43af-9ae4-9891d588feb6" name="Default" comment="" />
 =======
-
+    <list default="true" id="d01aa37a-fa5b-43af-9ae4-9891d588feb6" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/title/title.jsp" afterPath="$PROJECT_DIR$/web/title/title.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/title/titleSuccess.jsp" afterPath="$PROJECT_DIR$/web/title/titleSuccess.jsp" />
+    </list>
+>>>>>>> cf17f05afa0bfebad68e99e1a6f00e807e7088e0
     <ignored path="MyBBS.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -775,7 +779,14 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.66972476">
               <caret line="157" column="28" selection-start-line="157" selection-start-column="28" selection-end-line="157" selection-end-column="28" />
-
+=======
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="userTiezi.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/userConfig/userTiezi.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.666667">
+              <caret line="99" column="27" selection-start-line="99" selection-start-column="27" selection-end-line="99" selection-end-column="27" />
+>>>>>>> cf17f05afa0bfebad68e99e1a6f00e807e7088e0
               <folding />
             </state>
           </provider>
@@ -818,7 +829,12 @@
       <list>
 <<<<<<< HEAD
 =======
-
+        <option value="$PROJECT_DIR$/src/generalKanTie/GeneralKanTieDAO.java" />
+        <option value="$PROJECT_DIR$/src/generalKanTie/GeneralKanTieService.java" />
+        <option value="$PROJECT_DIR$/web/general/generalError.jsp" />
+        <option value="$PROJECT_DIR$/src/tiezi/Tiezi.java" />
+        <option value="$PROJECT_DIR$/src/tiezi/ReplyTiezi.java" />
+>>>>>>> cf17f05afa0bfebad68e99e1a6f00e807e7088e0
         <option value="$PROJECT_DIR$/src/publishTiezi/PublishTieziService.java" />
         <option value="$PROJECT_DIR$/src/tieziReply/TieziReplyService.java" />
         <option value="$PROJECT_DIR$/src/mytest/timeCastTest.java" />
@@ -872,7 +888,9 @@
         <option value="$PROJECT_DIR$/web/title/titleSuccess.jsp" />
         <option value="$PROJECT_DIR$/web/userConfig/userConfig.jsp" />
 =======
-
+        <option value="$PROJECT_DIR$/web/title/title.jsp" />
+        <option value="$PROJECT_DIR$/web/title/titleSuccess.jsp" />
+>>>>>>> cf17f05afa0bfebad68e99e1a6f00e807e7088e0
       </list>
     </option>
   </component>
@@ -1016,7 +1034,8 @@
 <<<<<<< HEAD
               <option name="myItemId" value="main" />
 =======
-
+              <option name="myItemId" value="title" />
+>>>>>>> cf17f05afa0bfebad68e99e1a6f00e807e7088e0
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1067,7 +1086,12 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="generalKanTie" />
 =======
-
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="general" />
+>>>>>>> cf17f05afa0bfebad68e99e1a6f00e807e7088e0
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1775,7 +1799,8 @@
       <workItem from="1474176412493" duration="78000" />
       <workItem from="1474253524193" duration="7322000" />
 =======
-
+      <workItem from="1474167353728" duration="6023000" />
+>>>>>>> cf17f05afa0bfebad68e99e1a6f00e807e7088e0
     </task>
     <task id="LOCAL-00001" summary="new change">
       <created>1473657047248</created>
@@ -1790,7 +1815,8 @@
 <<<<<<< HEAD
     <option name="totallyTimeSpent" value="167035000" />
 =======
-
+    <option name="totallyTimeSpent" value="159728000" />
+>>>>>>> cf17f05afa0bfebad68e99e1a6f00e807e7088e0
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1808,7 +1834,8 @@
 <<<<<<< HEAD
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35853976" sideWeight="0.48" order="2" side_tool="false" content_ui="tabs" />
 =======
-
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3546284" sideWeight="0.48" order="2" side_tool="false" content_ui="tabs" />
+>>>>>>> cf17f05afa0bfebad68e99e1a6f00e807e7088e0
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985657" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1905,7 +1932,134 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/userConfig/userTiezi/UserTieziDAO.java">
 =======
-   
+    <entry file="file://$PROJECT_DIR$/src/main/Tiezi/tieziReply/TieziReplyService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.62608695">
+          <caret line="18" column="61" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/encode/EncodingFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27391306">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/myLogin/login/LoginServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1173913">
+          <caret line="62" column="58" selection-start-line="62" selection-start-column="58" selection-end-line="62" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/myLogin/login/LoginIPServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/myLogin/login/LoginOutServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.62608695">
+          <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/title/regist/registOk.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4595843">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/general/generalError.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.55172414">
+          <caret line="36" column="10" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Tiezi/tieziReply/TieziReplyServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.53246754">
+          <caret line="70" column="59" selection-start-line="70" selection-start-column="59" selection-end-line="70" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Tiezi/generalTieziFilter/GeneralTieziFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5708245">
+          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/title/login/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3918919">
+          <caret line="91" column="64" selection-start-line="91" selection-start-column="31" selection-end-line="91" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/general/general.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Tiezi/publishTiezi/PublishTieziServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Tiezi/publishTiezi/PublishTieziService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.53503186">
+          <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/domain/tiezi/ReplyTiezi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Tiezi/tieziReply/TieziReplyDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9756098">
+          <caret line="46" column="9" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Tiezi/publishTiezi/PublishTieziDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5365854">
+          <caret line="28" column="58" selection-start-line="28" selection-start-column="58" selection-end-line="28" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Tiezi/generalKanTie/GeneralKanTieServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41463414">
+          <caret line="74" column="21" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/myLogin/loginFilter/LoginFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5064378">
+          <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/general/generalTiezi.jsp">
+>>>>>>> cf17f05afa0bfebad68e99e1a6f00e807e7088e0
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.38197425">
           <caret line="62" column="105" selection-start-line="62" selection-start-column="105" selection-end-line="62" selection-end-column="105" />
@@ -1927,7 +2081,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/userConfig/userTiezi/UserTieziServlet.java">
 =======
-
+    <entry file="file://$PROJECT_DIR$/web/title/regist/regist2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.8154507">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/title/regist/regist.jsp">
+>>>>>>> cf17f05afa0bfebad68e99e1a6f00e807e7088e0
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.65665233">
           <caret line="69" column="40" selection-start-line="69" selection-start-column="40" selection-end-line="69" selection-end-column="40" />
@@ -2060,7 +2222,37 @@
         <state vertical-scroll-proportion="0.66972476">
           <caret line="157" column="28" selection-start-line="157" selection-start-column="28" selection-end-line="157" selection-end-column="28" />
 =======
- 
+    <entry file="file://$PROJECT_DIR$/web/userConfig/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+          <folding>
+            <element signature="n#!!doc;n#setPassword1#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.61503416">
+          <caret line="45" column="78" selection-start-line="45" selection-start-column="78" selection-end-line="45" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/title/title.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.79498863">
+          <caret line="93" column="92" selection-start-line="93" selection-start-column="8" selection-end-line="93" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/userConfig/userTiezi.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.666667">
+          <caret line="99" column="27" selection-start-line="99" selection-start-column="27" selection-end-line="99" selection-end-column="27" />
+>>>>>>> cf17f05afa0bfebad68e99e1a6f00e807e7088e0
           <folding />
         </state>
       </provider>
