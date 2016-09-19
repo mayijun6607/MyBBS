@@ -105,8 +105,8 @@
             }*/
     %>
 
-    <%--帖子标题预览 一页20条 做成表格，标题 、发帖人、发帖时间 *****href还没实现******--%>
-    <div style="border:2px dashed black;width:50%;position:relative;bottom:10%;left:20%;">\
+    <%--帖子标题预览 一页20条 做成表格，标题 、发帖人、发帖时间 --%>
+    <div style="border:2px dashed black;width:70%;position:relative;bottom:10%;left:10%;">
 
         <table style="border-collapse:   separate;   border-spacing:   25px;width: 100%; ">
             <%
@@ -120,6 +120,18 @@
                 <%--<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>--%>
                 <td align="right"><%out.print(username[k]); %></td>
                 <td><%=time[k].substring(0,16)%></td>
+                <%
+                    if(username[k].equals((String)session.getAttribute("username"))){
+                        if(((String)session.getAttribute("username")).length()<7){
+                %>
+                <td>
+                    <form action="/DeleteTieziServlet" method="post">
+                        <input type="text" hidden name="tempTime" value="<%=time[k]%>"/>
+                        <input type="text" hidden name="deleteId" value="<%=tieziId[k]%>"/>
+                        <input type="submit" value="删除帖子"/>
+                    </form>
+                </td>
+                <%}}%>
             </tr>
             <%
                     }

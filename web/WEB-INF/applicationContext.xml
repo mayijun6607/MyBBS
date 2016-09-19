@@ -63,4 +63,9 @@
   <bean id="userTieziService" class="main.userConfig.userTiezi.UserTieziService" p:userTieziDAO-ref="userTieziDAO"/>
   <bean id="userTieziServlet" class="main.userConfig.userTiezi.UserTieziServlet" p:comboPooledDataSource-ref="dataSource"
          p:userTieziService-ref="userTieziService" p:page-ref="page"/>
+  <!--删主题贴-->
+  <bean id="deleteTieziDAO" class="main.Tiezi.deleteTiezi.DeleteTieziDAO"/>
+  <bean id="deleteTieziService" class="main.Tiezi.deleteTiezi.DeleteTieziService" p:deleteTieziDAO-ref="deleteTieziDAO"/>
+  <bean id="deleteTieziServlet" class="main.Tiezi.deleteTiezi.DeleteTieziServlet" p:comboPooledDataSource-ref="dataSource"
+        p:deleteTieziService-ref="deleteTieziService"/>
 </beans>

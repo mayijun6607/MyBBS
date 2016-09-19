@@ -67,6 +67,7 @@ public class UserTieziServlet extends HttpServlet {
             request.setAttribute("tieziContent",userTieziService.getTieziContent(userTiezi,page));
             request.setAttribute("tieziId",userTieziService.getTieziId(userTiezi,page));
             request.setAttribute("tieziTime",userTieziService.getTieziTime(userTiezi,page));
+            request.setAttribute("tieziArea",userTieziService.getAreaId(userTiezi,page));
 
             request.setAttribute("pageSize",page.getPageSize());
             request.setAttribute("totalPage",page.getTotalPage());

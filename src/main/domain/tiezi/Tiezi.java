@@ -8,7 +8,7 @@ public class Tiezi {
     private String tieziTitle;
     private String tieziContent;
     private String tieziDatetime;
-    private String tieziArea;
+    private int areaId;
     private int tieziId;
 
     public Tiezi(){
@@ -20,6 +20,15 @@ public class Tiezi {
         this.tieziContent=tieziContent;
         this.tieziDatetime=tieziDatetime;
         this.tieziId=tieziId;
+        //this.areaId=areaId;
+    }
+    public Tiezi(String username,String tieziTitle,String tieziContent,String tieziDatetime,int tieziId,int areaId){
+        this.username=username;
+        this.tieziTitle=tieziTitle;
+        this.tieziContent=tieziContent;
+        this.tieziDatetime=tieziDatetime;
+        this.tieziId=tieziId;
+        this.areaId=areaId;
     }
 
     public int getTieziId() {
@@ -62,11 +71,11 @@ public class Tiezi {
         this.tieziDatetime = tieziDatetime;
     }
 
-    public String getTieziArea() {
-        return tieziArea;
+    public int getTieziArea() {
+        return areaId;
     }
 
-    public void setTieziArea(String tieziArea) {
-        this.tieziArea = tieziArea;
+    public void setTieziArea(int areaId) {
+        this.areaId = areaId;
     }
 }

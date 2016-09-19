@@ -14,7 +14,7 @@ import java.sql.SQLException;
 public class RegistDAO {
 
     //增加和查询语句
-    private String addSql="insert into user values(null,?,?)";
+    private String addSql="insert into user values(null,?,?,0)";
     private String findSql="select username from user where username=?";
 
     //返回值，1是有，-1是无;
