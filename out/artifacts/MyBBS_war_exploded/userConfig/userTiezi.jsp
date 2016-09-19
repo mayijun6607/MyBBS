@@ -101,6 +101,10 @@
                             if(tieziId[k]!=0){
                     %>
                     <tr>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> eeabd0c53ccd384d68d477c9b38e4933bb87ec23
                         <td style="text-overflow: ellipsis;overflow: hidden;width:20%;white-space: nowrap;">
                             <a href="${pageContext.request.contextPath}/GeneralKanTieServlet?tieziId=<%=tieziId[k]%>&tieziTime=<%=time[k]%>"
                                               style="font-size: medium"><%
@@ -117,6 +121,13 @@
                             <%=""%>
                             <%}%>
                         </td>
+<<<<<<< HEAD
+=======
+=======
+                        <td><a href="${pageContext.request.contextPath}/GeneralKanTieServlet?tieziId=<%=tieziId[k]%>&tieziTime=<%=time[k]%>"
+                                              style="font-size: medium"><%out.print(title[k]);%></a> </td>
+>>>>>>> cf17f05afa0bfebad68e99e1a6f00e807e7088e0
+>>>>>>> eeabd0c53ccd384d68d477c9b38e4933bb87ec23
                         <td><%=time[k].substring(0,16)%></td>
                     </tr>
                     <%
