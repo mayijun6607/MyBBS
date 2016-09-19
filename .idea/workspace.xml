@@ -1,42 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d01aa37a-fa5b-43af-9ae4-9891d588feb6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/Tiezi/deleteTiezi/DeleteTieziDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/Tiezi/deleteTiezi/DeleteTieziService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/Tiezi/deleteTiezi/DeleteTieziServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/general/deleteOk.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MyBBS_war_exploded/WEB-INF/classes/main/domain/tiezi/Tiezi.class" afterPath="$PROJECT_DIR$/out/artifacts/MyBBS_war_exploded/WEB-INF/classes/main/domain/tiezi/Tiezi.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MyBBS_war_exploded/WEB-INF/classes/main/myRegist/regist/RegistDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/MyBBS_war_exploded/WEB-INF/classes/main/myRegist/regist/RegistDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MyBBS_war_exploded/WEB-INF/classes/main/userConfig/userTiezi/UserTieziDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/MyBBS_war_exploded/WEB-INF/classes/main/userConfig/userTiezi/UserTieziDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MyBBS_war_exploded/WEB-INF/classes/main/userConfig/userTiezi/UserTieziService.class" afterPath="$PROJECT_DIR$/out/artifacts/MyBBS_war_exploded/WEB-INF/classes/main/userConfig/userTiezi/UserTieziService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MyBBS_war_exploded/WEB-INF/classes/main/userConfig/userTiezi/UserTieziServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/MyBBS_war_exploded/WEB-INF/classes/main/userConfig/userTiezi/UserTieziServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MyBBS/main/domain/tiezi/Tiezi.class" afterPath="$PROJECT_DIR$/out/production/MyBBS/main/domain/tiezi/Tiezi.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MyBBS/main/myRegist/regist/RegistDAO.class" afterPath="$PROJECT_DIR$/out/production/MyBBS/main/myRegist/regist/RegistDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MyBBS/main/userConfig/userTiezi/UserTieziDAO.class" afterPath="$PROJECT_DIR$/out/production/MyBBS/main/userConfig/userTiezi/UserTieziDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MyBBS/main/userConfig/userTiezi/UserTieziService.class" afterPath="$PROJECT_DIR$/out/production/MyBBS/main/userConfig/userTiezi/UserTieziService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MyBBS/main/userConfig/userTiezi/UserTieziServlet.class" afterPath="$PROJECT_DIR$/out/production/MyBBS/main/userConfig/userTiezi/UserTieziServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MyBBS_war_exploded/WEB-INF/applicationContext.xml" afterPath="$PROJECT_DIR$/out/artifacts/MyBBS_war_exploded/WEB-INF/applicationContext.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MyBBS_war_exploded/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/out/artifacts/MyBBS_war_exploded/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MyBBS_war_exploded/general/general.jsp" afterPath="$PROJECT_DIR$/out/artifacts/MyBBS_war_exploded/general/general.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MyBBS_war_exploded/general/generalTiezi.jsp" afterPath="$PROJECT_DIR$/out/artifacts/MyBBS_war_exploded/general/generalTiezi.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MyBBS_war_exploded/title/title.jsp" afterPath="$PROJECT_DIR$/out/artifacts/MyBBS_war_exploded/title/title.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MyBBS_war_exploded/title/titleSuccess.jsp" afterPath="$PROJECT_DIR$/out/artifacts/MyBBS_war_exploded/title/titleSuccess.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MyBBS_war_exploded/userConfig/userTiezi.jsp" afterPath="$PROJECT_DIR$/out/artifacts/MyBBS_war_exploded/userConfig/userTiezi.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/domain/tiezi/Tiezi.java" afterPath="$PROJECT_DIR$/src/main/domain/tiezi/Tiezi.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/myRegist/regist/RegistDAO.java" afterPath="$PROJECT_DIR$/src/main/myRegist/regist/RegistDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/userConfig/userTiezi/UserTieziDAO.java" afterPath="$PROJECT_DIR$/src/main/userConfig/userTiezi/UserTieziDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/userConfig/userTiezi/UserTieziService.java" afterPath="$PROJECT_DIR$/src/main/userConfig/userTiezi/UserTieziService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/userConfig/userTiezi/UserTieziServlet.java" afterPath="$PROJECT_DIR$/src/main/userConfig/userTiezi/UserTieziServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/applicationContext.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/applicationContext.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/general/general.jsp" afterPath="$PROJECT_DIR$/web/general/general.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/general/generalTiezi.jsp" afterPath="$PROJECT_DIR$/web/general/generalTiezi.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/title/title.jsp" afterPath="$PROJECT_DIR$/web/title/title.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/title/titleSuccess.jsp" afterPath="$PROJECT_DIR$/web/title/titleSuccess.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/userConfig/userTiezi.jsp" afterPath="$PROJECT_DIR$/web/userConfig/userTiezi.jsp" />
-    </list>
+    <list default="true" id="d01aa37a-fa5b-43af-9ae4-9891d588feb6" name="Default" comment="" />
     <ignored path="MyBBS.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -1781,7 +1746,7 @@
       <workItem from="1474167353728" duration="5930000" />
       <workItem from="1474176412493" duration="78000" />
       <workItem from="1474253524193" duration="7082000" />
-      <workItem from="1474261753633" duration="30000" />
+      <workItem from="1474261753633" duration="128000" />
     </task>
     <task id="LOCAL-00001" summary="new change">
       <created>1473657047248</created>
@@ -1793,7 +1758,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="166825000" />
+    <option name="totallyTimeSpent" value="166923000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
