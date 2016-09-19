@@ -99,4 +99,19 @@ public class UserTieziService {
         }
         return tieziTime;
     }
+    //得到区域ID
+    public int[] getAreaId(List<Tiezi> userTiezi,Page page){
+        int[] areaId=new int[page.getPageSize()];
+        int i=0;
+        for(Tiezi tieziTemp:userTiezi){
+            if(i<=page.getPageSize()) {
+                areaId[i]=tieziTemp.getTieziArea();
+                i++;
+            }
+            else{
+                return areaId;
+            }
+        }
+        return areaId;
+    }
 }

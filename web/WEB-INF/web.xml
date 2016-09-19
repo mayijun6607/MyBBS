@@ -62,6 +62,14 @@
         <url-pattern>/RegistServlet</url-pattern>
     </servlet-mapping>
     <servlet>
+        <servlet-name>DeleteTieziServlet</servlet-name>
+        <servlet-class>main.Tiezi.deleteTiezi.DeleteTieziServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteTieziServlet</servlet-name>
+        <url-pattern>/DeleteTieziServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
         <servlet-name>TieziReplyServlet</servlet-name>
         <servlet-class>main.Tiezi.tieziReply.TieziReplyServlet</servlet-class>
     </servlet>

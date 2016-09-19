@@ -91,7 +91,7 @@
         userconfig.src="${pageContext.request.contextPath}/title/image/title-config.jpg";
     }
     function setConfig(){
-        window.location.href="";
+        window.location.href="${pageContext.request.contextPath}/userConfig/userConfig.jsp";
     }
 </script>
 </html>

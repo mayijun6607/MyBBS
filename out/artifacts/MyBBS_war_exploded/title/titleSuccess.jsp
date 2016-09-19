@@ -49,7 +49,15 @@
             <input type="image" id="mygame" width="100%" height="100%" src="<c:url value="/title/image/title-game.jpg"/> "/>
         </span>
         <span style="position:absolute;right:5%;" onmousemove="userconfig1()" onmouseout="userconfig2()" onclick="setConfig()">
-            <input type="image" id="userconfig" width="100%" height="100%" src="<c:url value="/title/image/title-config.jpg"/> "/>
+            <input type="image" id="userconfig"
+                    <%
+                        if(((String)session.getAttribute("username")).length()>6){
+                    %>
+                   hidden
+                    <%
+                        }
+                    %>
+                   width="100%" height="100%" src="<c:url value="/title/image/title-config.jpg"/> "/>
         </span>
 </div>
 </body>
@@ -105,7 +113,7 @@
         userconfig.src="${pageContext.request.contextPath}/title/image/title-config.jpg";
     }
     function setConfig(){
-        window.location.href="";
+        window.location.href="${pageContext.request.contextPath}/userConfig/userConfig.jsp";
     }
 </script>
 </html>
