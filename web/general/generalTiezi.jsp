@@ -61,7 +61,14 @@
             }
         }*/
     %>
-    <title><%=tieziTitle%></title>
+    <title>
+        <%
+        if(tieziTitle.length()>10){
+        %>
+        <%=tieziTitle.substring(0,10)+"..."%>
+        <%}else{%>
+        <%=tieziTitle%>
+        <%}%></title>
 </head>
 <body>
     <%--顶部锚点--%>
@@ -82,14 +89,28 @@
     <%--放Mybbs>>XXX这个导航--%>
         <span style="height:5%;width:100%;font-weight: bold;font-size: larger;position: absolute;top:19%;">
             &nbsp;<img height:="2.5%" width="1%" src="<c:url value="/index/image/index-home.jpg"/>"/>  &gt;&gt;  <a href="<c:url value="/index.jsp"/>">MyBBS</a>  &gt;&gt;
-            <a href="<c:url value="/general/general.jsp" />">综合讨论</a>  &gt;&gt;  <%=tieziTitle%>
+            <a href="<c:url value="/general/general.jsp" />">综合讨论</a>  &gt;&gt;<%
+            if(tieziTitle.length()>10){
+        %>
+           <%=tieziTitle.substring(0,10)+"..."%>
+           <%}else{%>
+           <%=tieziTitle%>
+           <%}%>
         </span>
 
     <%--帖子内容--%>
     <div style="background-color:#99d9ea;border:2px solid black;width:97.6%;position:absolute;top:24%;left:1%;">
        <%-- 帖子标题--%>
         <br/>
-        &nbsp;<span style="font-size: 220%"><b><%=tieziTitle%></b><hr/></span>
+        &nbsp;<span style="font-size: 220%;"><b>
+           <%
+               if(tieziTitle.length()>10){
+           %>
+           <%=tieziTitle.substring(0,10)+"..."%>
+           <%}else{%>
+           <%=tieziTitle%>
+           <%}%>
+       </b><hr/></span>
         <div style="position: absolute;left:50%;top:3%;">
             <form action="<c:url value="/GeneralKanTieServlet"/> " method="get">
                 <input type="button" value="首页" onclick="firstPage()"/>
@@ -124,14 +145,27 @@
                 </tr>
                 <tr >
                     <td align="left" style="border-bottom: 1px solid black"><%=tieziTime%></td>
-                    <td align="right" style="border-bottom: 1px solid black;">1楼</td>
+                    <td align="right" style="border-bottom: 1px solid black;">1楼&nbsp;&nbsp;
+                        <%
+                            if(username.equals((String)session.getAttribute("username"))){
+                                if(((String)session.getAttribute("username")).length()<7){
+                        %>
+                        <form id="deleteId" action="/DeleteTieziServlet" method="post">
+                            <input type="text" hidden name="tempTime" value="<%=tempTime%>"/>
+                            <input type="text" name="deleteId" hidden value="<%=tieziId%>"/>
+                            <input type="submit" value="删除帖子" onclick="delete1()"/>
+                        </form>
+                        <%}}%>
+                    </td>
                 </tr>
                 <%
                     }
                 %>
                 <%
+                    //String replyDeleteTime;
                     for(int u=0;u<(Integer)request.getAttribute("pageSize");u++){
                         if(floorId[u]!=0){
+                            //replyDeleteTime=replyTime[u];
                 %>
                     <tr>
                         <td align="left"><%=replyUsername[u]%></td>
@@ -139,7 +173,19 @@
                     </tr>
                     <tr >
                         <td align="left" style="border-bottom: 1px solid black"><%=replyTime[u].substring(0,16)%></td>
-                        <td align="right" style="border-bottom: 1px solid black;"><%=floorId[u]+1%>楼</td>
+                        <td align="right" style="border-bottom: 1px solid black;"><%=floorId[u]+1%>楼&nbsp;&nbsp;
+                            <%
+                                if(replyUsername[u].equals((String)session.getAttribute("username"))||username.equals((String)session.getAttribute("username"))){
+                                    if(((String)session.getAttribute("username")).length()<7){
+                            %>
+                            <a href="${pageContext.request.contextPath}/DeleteReplyServlet?tempTime=<%=tempTime%>&replyTime=<%=replyTime[u]%>">删除回复</a>
+                           <%-- <form id="deleteReplyId" action="/DeleteReplyServlet" method="post">
+                                <input type="text" hidden name="tempTime" value="<%=tempTime%>"/>
+                                <input type="text" name="replyTime" hidden value="<%=%>"/>
+                                <input type="text" name="tieziId" hidden value="<%=tieziId%>"/>
+                                <input type="button" value="删除回复" onclick="delete2()"/>
+                            </form>--%>
+                            <%}}%></td>
                     </tr>
                 <%
                         }
@@ -206,6 +252,22 @@
     }
     function returnTop2(){
         returnTop.src="${pageContext.request.contextPath}/general/image/return-top.jpg";
+    }
+    //删帖子提示
+    var deleteForm=document.getElementById("deleteId");
+    function delete1(){
+        var deleteConfirm=confirm("确认删除帖子？");
+        if(deleteConfirm==true){
+            deleteForm.submit();
+        }
+    }
+    //删回复提示
+    var deleteReply=document.getElementById("deleteReplyId");
+    function delete2(){
+        var deleteConfirm=confirm("确认删除帖子？");
+        if(deleteConfirm==true){
+            deleteReply.submit();
+        }
     }
 </script>
 </html>

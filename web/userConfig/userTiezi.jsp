@@ -39,7 +39,8 @@
         <div style="border:2px solid black;position: absolute;left:10%;top:15%;width:15%;height:75%;">
             <hr/><input type="button" value="修改密码" style="width:100%;height: 15%"
                         onclick="setPassword1()"/><br/><hr/>
-            <input type="button" value="自己的主题帖" style="width:100%;height: 15%" disabled onclick="checkTiezi1()"/><br/><hr/>
+            <input type="button" value="自己的主题帖" style="width:100%;height: 15%"
+                   disabled onclick="checkTiezi1()"/><br/><hr/>
         </div>
         <%--右边的显示框：查看主题帖--%>
         <div id="setPassword" style="border:2px solid black;position: absolute;left:30%;top:15%;width:50%;height:80%;">
@@ -72,6 +73,7 @@
                     String[] title=new String[10];
                     String[] content=new String[10];
                     String[] time=new String[10];
+                    int[] areaId=new int[10];
                     //没剪切过的时间
                     // String[] realTime=new String[10];
                     for(int p=0;p<(Integer)request.getAttribute("pageSize");p++){
@@ -87,9 +89,11 @@
                     content=(String[])request.getAttribute("tieziContent");
                     time=(String[])request.getAttribute("tieziTime");
                     int pageSize=(Integer)request.getAttribute("pageSize");
+                    areaId=(int[])request.getAttribute("tieziArea");
+                    //System.out.println(areaId[0]);
                 %>
             <%--查看主题帖内容--%>
-            <div  style="position:relative;left:12%;">
+            <div  style="position:relative;left:10%; ">
 
                 <table style="border-collapse:   separate;   border-spacing:   12px;width: 100%; ">
                     <%
@@ -97,8 +101,22 @@
                             if(tieziId[k]!=0){
                     %>
                     <tr>
-                        <td><a href="${pageContext.request.contextPath}/GeneralKanTieServlet?tieziId=<%=tieziId[k]%>&tieziTime=<%=time[k]%>"
-                                              style="font-size: medium"><%out.print(title[k]);%></a> </td>
+                        <td style="text-overflow: ellipsis;overflow: hidden;width:20%;white-space: nowrap;">
+                            <a href="${pageContext.request.contextPath}/GeneralKanTieServlet?tieziId=<%=tieziId[k]%>&tieziTime=<%=time[k]%>"
+                                              style="font-size: medium"><%
+                                if(title[k].length()>10){
+                            %>
+                                <%=title[k].substring(0,10)+"..."%>
+                                <%}else{%>
+                                <%=title[k]%>
+                                <%}%></a> </td>
+                        <td style="font-size: medium">
+                            <%if(areaId[k]==1){%>
+                            <%="综合讨论"%>
+                            <%}else{%>
+                            <%=""%>
+                            <%}%>
+                        </td>
                         <td><%=time[k].substring(0,16)%></td>
                     </tr>
                     <%

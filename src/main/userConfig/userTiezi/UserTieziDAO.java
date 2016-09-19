@@ -60,7 +60,7 @@ public class UserTieziDAO {
             resultSet=preparedStatement.executeQuery();
             while(resultSet.next()){
                 userTiezi.add(new Tiezi(username,resultSet.getString("tiezi_title"),resultSet.getString("tiezi_content")
-                ,resultSet.getString("tiezi_time"),resultSet.getInt("tiezi_id")));
+                ,resultSet.getString("tiezi_time"),resultSet.getInt("tiezi_id"),resultSet.getInt("area_id")));
             }
             return userTiezi;
         }

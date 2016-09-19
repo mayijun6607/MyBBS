@@ -105,8 +105,8 @@
             }*/
     %>
 
-    <%--帖子标题预览 一页20条 做成表格，标题 、发帖人、发帖时间 *****href还没实现******--%>
-    <div style="border:2px dashed black;width:50%;position:relative;bottom:10%;left:20%;">\
+    <%--帖子标题预览 一页20条 做成表格，标题 、发帖人、发帖时间 --%>
+    <div style="border:2px dashed black;width:70%;position:relative;bottom:10%;left:10%;">
 
         <table style="border-collapse:   separate;   border-spacing:   25px;width: 100%; ">
             <%
@@ -120,6 +120,18 @@
                 <%--<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>--%>
                 <td align="right"><%out.print(username[k]); %></td>
                 <td><%=time[k].substring(0,16)%></td>
+                <%
+                    if(username[k].equals((String)session.getAttribute("username"))){
+                        if(((String)session.getAttribute("username")).length()<7){
+                %>
+                <td>
+                    <form id="deleteId" action="/DeleteTieziServlet" method="post">
+                        <input type="text" hidden name="tempTime" value="<%=time[k]%>"/>
+                        <input type="text" hidden name="deleteId" value="<%=tieziId[k]%>"/>
+                        <input type="button" value="删除帖子" onclick="delete1()"/>
+                    </form>
+                </td>
+                <%}}%>
             </tr>
             <%
                     }
@@ -190,6 +202,15 @@
     }
     function returnTop2(){
         returnTop.src="${pageContext.request.contextPath}/general/image/return-top.jpg";
+    }
+
+    //删帖子提示
+    var deleteForm=document.getElementById("deleteId");
+    function delete1(){
+        var deleteConfirm=confirm("确认删除帖子？");
+        if(deleteConfirm==true){
+            deleteForm.submit();
+        }
     }
 </script>
 </html>
